@@ -72,6 +72,8 @@ function copyFonts() {
     'manrope-700.woff2': '@fontsource/manrope/files/manrope-latin-700-normal.woff2',
     'jost-400.woff2': '@fontsource/jost/files/jost-latin-400-normal.woff2',
     'jost-500.woff2': '@fontsource/jost/files/jost-latin-500-normal.woff2',
+    'jost-200.woff2': '@fontsource/jost/files/jost-latin-200-normal.woff2',
+    'jost-700.woff2': '@fontsource/jost/files/jost-latin-700-normal.woff2',
     'caveat-600.woff2': '@fontsource/caveat/files/caveat-latin-600-normal.woff2',
   };
   for (const [name, source] of Object.entries(fonts)) fs.copyFileSync(path.join(ROOT, 'node_modules', source), path.join(dir, name));

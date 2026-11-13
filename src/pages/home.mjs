@@ -1,4 +1,4 @@
-// Home page: the 12 sections in plan.md order (the footer, section 12, comes from the layout).
+// Home page: the 12 sections in plan.md order, plus the kitchen favourites carousel under the hero (the footer, section 12, comes from the layout).
 // Every fact and price is read from src/data, so nothing here needs editing when the real menu arrives.
 import { BUSINESS as B } from '../data/business.mjs';
 import { DIETS, TAGS, homeItems, itemById } from '../data/menu.mjs';
@@ -6,6 +6,7 @@ import { arrow, esc, icon, formatPrice, hoursRows, addressLine, jsonScript } fro
 import { picture, photoUrl } from '../templates/picture.mjs';
 import { sprig, flower, lineIcon } from '../templates/motifs.mjs';
 import { cupMark, lockup } from '../brand/logo.mjs';
+import { favourites } from '../templates/favourites.mjs';
 
 const photoKey = (item) => item.img || item.id;
 const addHref = (item) => `/menu/?add=${item.id}#order`;
@@ -404,7 +405,7 @@ export default {
   path: '/',
   title: 'Wick House | Specialty coffee & sandwiches in Hackney Wick',
   description: 'Specialty coffee, freddo espresso and premium Italian and Greek sandwiches in Hackney Wick, London. Order ahead and skip the queue. Opening 18 November.',
-  scripts: ['home', 'lightbox'],
+  scripts: ['home', 'favourites', 'lightbox'],
   brew: true,
-  body: [hero, offer, signatures, coffee, orderAhead, loyalty, story, gallery, delivery, hiring, visit, data].join('\n'),
+  body: [hero, favourites, offer, signatures, coffee, orderAhead, loyalty, story, gallery, delivery, hiring, visit, data].join('\n'),
 };

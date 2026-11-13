@@ -106,6 +106,23 @@ export const MENU = [
   },
 ];
 
-export const allItems = () => MENU.flatMap((c) => c.items.map((i) => ({ ...i, category: c.id })));
+// Kitchen favourites: the orbit carousel under the home hero (src/templates/favourites.mjs).
+// PLACEHOLDER picks for the pitch. Names, prices and descriptions come from the items above; the rest is styling.
+//   id           an item id above
+//   line1/line2  the two-weight title: thin first line, heavy second line
+//   accent       brand colour for the arc behind the plate and the price badge (gold, goldlight, sage or lilac:
+//                forest text sits on it, checked by npm run contrast)
+//   ingredients  short chips on the card
+//   focus, zoom  where the round crop sits on the photo, and how far it zooms in
+export const FAVOURITES = [
+  { id: 'mortadella-focaccia', line1: 'Mortadella', line2: 'Focaccia', accent: 'sage', ingredients: ['Mortadella', 'Burrata', 'Pistachio pesto', 'Rosemary focaccia'], focus: '50% 60%', zoom: 1.45 },
+  { id: 'chicken-souvlaki', line1: 'Chicken', line2: 'Souvlaki', accent: 'gold', ingredients: ['Lemon-oregano chicken', 'Tzatziki', 'Red onion', 'Warm pita'], focus: '52% 62%', zoom: 1.45 },
+  { id: 'freddo-espresso', line1: 'Freddo', line2: 'Espresso', accent: 'goldlight', ingredients: ['Double espresso', 'Shaken with ice', 'Fresh ice'], focus: '50% 55%', zoom: 1.25 },
+  { id: 'caprese', line1: 'Ciabatta', line2: 'Caprese', accent: 'sage', ingredients: ['Heritage tomato', 'Buffalo mozzarella', 'Basil', 'Olive oil'], focus: '50% 58%', zoom: 1.45 },
+  { id: 'baklava', line1: 'Pistachio', line2: 'Baklava', accent: 'lilac', ingredients: ['Filo', 'Pistachio', 'Honey syrup'], focus: '50% 50%', zoom: 1.1 },
+  { id: 'cannoli', line1: 'Ricotta', line2: 'Cannoli', accent: 'goldlight', ingredients: ['Crisp shell', 'Sweet ricotta', 'Candied orange'], focus: '45% 50%', zoom: 1.1 },
+];
+
+export const allItems = () =>MENU.flatMap((c) => c.items.map((i) => ({ ...i, category: c.id })));
 export const itemById = (id) => allItems().find((i) => i.id === id);
 export const homeItems = (slot) => allItems().filter((i) => i.home === slot);

@@ -1,11 +1,16 @@
 /* The bean journey's styles. The Tailwind CLI inlines this import. */
 @import './brew.css';
+/* The kitchen favourites carousel under the home hero. */
+@import './favourites.css';
 
 /* Fonts are self-hosted from @fontsource; scripts/build.mjs copies the files into assets/fonts. */
 @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400; font-display: swap; src: url('/assets/fonts/manrope-400.woff2') format('woff2'); }
 @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 600; font-display: swap; src: url('/assets/fonts/manrope-600.woff2') format('woff2'); }
 @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 700; font-display: swap; src: url('/assets/fonts/manrope-700.woff2') format('woff2'); }
 @font-face { font-family: 'Jost'; font-style: normal; font-weight: 400; font-display: swap; src: url('/assets/fonts/jost-400.woff2') format('woff2'); }
+/* Jost 200 and 700: only the favourites carousel's two-weight titles use them, so they are not preloaded. */
+@font-face { font-family: 'Jost'; font-style: normal; font-weight: 200; font-display: swap; src: url('/assets/fonts/jost-200.woff2') format('woff2'); }
+@font-face { font-family: 'Jost'; font-style: normal; font-weight: 700; font-display: swap; src: url('/assets/fonts/jost-700.woff2') format('woff2'); }
 @font-face { font-family: 'Jost'; font-style: normal; font-weight: 500; font-display: swap; src: url('/assets/fonts/jost-500.woff2') format('woff2'); }
 @font-face { font-family: 'Caveat'; font-style: normal; font-weight: 600; font-display: swap; src: url('/assets/fonts/caveat-600.woff2') format('woff2'); }
 

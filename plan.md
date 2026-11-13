@@ -185,6 +185,12 @@ Repo `wick-house-demo` in this folder. The pipeline comes from `../../2. CLIENT/
 - [x] `docs/PITCH-NOTES.md`: demo script, feature → revenue table, quality numbers, real vs placeholder, what they need to send, and the path from demo to launch
 - [x] Final push
 
+### Phase 7: Kitchen favourites carousel
+- [x] Orbit carousel under the hero, rebuilt from the 21st.dev "Dish Orbit Carousel" brief without React or GSAP (`src/templates/favourites.mjs`, `src/js/favourites.js`, `src/css/favourites.css`, `FAVOURITES` in `src/data/menu.mjs`). Six dishes from the existing photos, cropped round. Scroll-pinned, one stretch per dish; arrows, thumbnails, pager, arrow keys and swipes jump. Transform and opacity only; reduced motion swaps instantly; without JS the first dish shows
+- [x] Left out of the brief on purpose: star ratings, chef names and like counts (invented reviews), the video button, and the endless scroll loop (it would trap visitors in the section)
+- [x] Checked at 1440, 1024, 768, 390 and 360px; `npm run qa` and `npm run qa:states` pass
+- [x] Push (deploys to the live demo)
+
 ## Verification
 - `npm run build` then `node serve.mjs`. Screenshot desktop and mobile with `screenshot.mjs`, then read the PNGs.
 - On a real phone through the Hostinger URL, check: sticky bar, order pad → WhatsApp hand-off, sign-up success state, lightbox, countdown.

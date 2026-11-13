@@ -32,6 +32,9 @@ const PAIRS = [
   ['lilac', 'forest', 'large'],
   ['forest', 'gold', 'text'],
   ['forest', 'sage', 'text'],
+  // The favourites carousel's price badges (34px price over the accent).
+  ['forest', 'goldlight', 'text'],
+  ['forest', 'lilac', 'large'],
 ];
 const NEED = { text: 4.5, large: 3, ui: 3 };
 
