@@ -4,13 +4,13 @@
 // a menu yet. Replace names, descriptions and prices with the owner's own before launch.
 //
 // Item fields
-//   id         stable slug, used by the order pad and for photos (assets/img/<img or id>)
+//   id         stable slug, used by the order pad and as the photo key (src/data/photos.mjs) unless img is set
 //   price      pounds, as a string with pence
 //   diet       'v' vegetarian, 'vg' vegan. Omit when the dish has meat or fish.
 //   tags       short badges: 'new', 'signature', 'greek-classic'
 //   home       where the homepage features it: 'signature', 'hot', 'cold'
 //   featured   the one drink the coffee section leads with
-//   img        photo name in assets/img when it differs from id (filled in Phase 2)
+//   img        photo name in assets/img when it differs from id (see src/data/photos.mjs)
 // Category fields
 //   addons     priced extras the order pad offers on every item in the category
 
@@ -33,10 +33,10 @@ export const MENU = [
     intro: 'Focaccia and ciabatta baked fresh each morning, filled to order.',
     items: [
       { id: 'mortadella-focaccia', name: 'Mortadella & burrata focaccia', price: '11.50', desc: 'Mortadella, a whole burrata and pistachio pesto on rosemary focaccia.', tags: ['signature', 'new'], home: 'signature' },
-      { id: 'porchetta-ciabatta', name: 'Porchetta ciabatta', price: '11.00', desc: 'Slow-roast porchetta, salsa verde and rocket in a toasted ciabatta.', tags: ['signature'], home: 'signature' },
+      { id: 'porchetta-ciabatta', name: 'Porchetta ciabatta', price: '11.00', desc: 'Slow-roast porchetta, salsa verde and rocket in a toasted ciabatta.', tags: ['signature'], home: 'signature', img: 'hero-porchetta' },
       { id: 'prosciutto-fig', name: 'Prosciutto, mozzarella & fig', price: '10.50', desc: 'Prosciutto crudo, fior di latte and fig jam on focaccia.' },
-      { id: 'caprese', name: 'Caprese', price: '9.00', desc: 'Heritage tomato, buffalo mozzarella, basil and good olive oil on focaccia.', diet: 'v', tags: ['signature'], home: 'signature' },
-      { id: 'chicken-souvlaki', name: 'Chicken souvlaki pita', price: '10.50', desc: 'Charred lemon-oregano chicken, tzatziki, red onion and tomato in a warm pita.', tags: ['signature', 'greek-classic'], home: 'signature' },
+      { id: 'caprese', name: 'Caprese', price: '9.00', desc: 'Heritage tomato, buffalo mozzarella, basil and good olive oil on ciabatta.', diet: 'v', tags: ['signature'], home: 'signature', img: 'caprese-ciabatta' },
+      { id: 'chicken-souvlaki', name: 'Chicken souvlaki pita', price: '10.50', desc: 'Charred lemon-oregano chicken, tzatziki, red onion and tomato in a warm pita.', tags: ['signature', 'greek-classic'], home: 'signature', img: 'souvlaki-pita' },
       { id: 'greek-lamb', name: 'Greek lamb, feta & olive', price: '11.50', desc: 'Slow-cooked lamb, crumbled feta, kalamata olives and oregano on ciabatta.' },
       { id: 'halloumi-pepper', name: 'Halloumi, roast pepper & honey', price: '9.50', desc: 'Grilled halloumi, sweet roast peppers, rocket and a drizzle of thyme honey.', diet: 'v' },
       { id: 'roast-veg-hummus', name: 'Roast veg, hummus & tapenade', price: '9.00', desc: 'Roast courgette, aubergine and pepper with hummus and black olive tapenade.', diet: 'vg' },
@@ -63,7 +63,7 @@ export const MENU = [
       { id: 'shot', label: 'Extra shot', price: '0.70' },
     ],
     items: [
-      { id: 'espresso', name: 'Espresso', price: '2.80', desc: 'A double shot, short and sweet.', diet: 'vg' },
+      { id: 'espresso', name: 'Espresso', price: '2.80', desc: 'A double shot, short and sweet.', diet: 'vg', img: 'espresso-shot' },
       { id: 'macchiato', name: 'Macchiato', price: '3.00', desc: 'Espresso marked with a spoon of milk foam.', diet: 'v' },
       { id: 'cortado', name: 'Cortado', price: '3.40', desc: 'Equal parts espresso and warm milk.', diet: 'v', home: 'hot' },
       { id: 'flat-white', name: 'Flat white', price: '3.80', desc: 'Double ristretto with silky steamed milk.', diet: 'v', home: 'hot' },
@@ -98,9 +98,9 @@ export const MENU = [
     short: 'Sweets',
     intro: 'Something small with your coffee.',
     items: [
-      { id: 'cannoli', name: 'Cannoli', price: '3.80', desc: 'Crisp shell filled to order with sweet ricotta and pistachio.', diet: 'v' },
+      { id: 'cannoli', name: 'Cannoli', price: '3.80', desc: 'Crisp shell filled to order with sweet ricotta and candied orange.', diet: 'v' },
       { id: 'tiramisu', name: 'Tiramisu cup', price: '5.50', desc: 'Espresso-soaked savoiardi, mascarpone and cocoa.', diet: 'v' },
-      { id: 'baklava', name: 'Baklava', price: '3.50', desc: 'Layers of filo, walnuts and honey syrup. Two pieces.', diet: 'v', tags: ['greek-classic'] },
+      { id: 'baklava', name: 'Baklava', price: '3.50', desc: 'Layers of filo, pistachios and honey syrup. Two pieces.', diet: 'v', tags: ['greek-classic'] },
       { id: 'olive-oil-cake', name: 'Olive-oil cake', price: '4.20', desc: 'Lemon and olive-oil sponge, light and not too sweet.', diet: 'vg' },
     ],
   },

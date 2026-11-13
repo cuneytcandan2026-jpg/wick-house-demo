@@ -1,0 +1,78 @@
+{
+  "hero-porchetta": {
+    "width": 2400,
+    "height": 1600
+  },
+  "mortadella-focaccia": {
+    "width": 921,
+    "height": 1151
+  },
+  "freddo-espresso": {
+    "width": 921,
+    "height": 1151
+  },
+  "souvlaki-pita": {
+    "width": 921,
+    "height": 1151
+  },
+  "caprese-ciabatta": {
+    "width": 921,
+    "height": 1151
+  },
+  "flat-white": {
+    "width": 921,
+    "height": 1151
+  },
+  "interior-green-bar": {
+    "width": 1400,
+    "height": 1750
+  },
+  "interior-coffee-counter": {
+    "width": 1400,
+    "height": 1750
+  },
+  "interior-window-seats": {
+    "width": 1400,
+    "height": 1750
+  },
+  "latte-pour": {
+    "width": 1400,
+    "height": 1750
+  },
+  "espresso-shot": {
+    "width": 1400,
+    "height": 1750
+  },
+  "cannoli": {
+    "width": 1400,
+    "height": 933
+  },
+  "tiramisu": {
+    "width": 1400,
+    "height": 933
+  },
+  "baklava": {
+    "width": 1400,
+    "height": 933
+  },
+  "mural-sign": {
+    "width": 944,
+    "height": 415
+  },
+  "mural-flowers": {
+    "width": 400,
+    "height": 415
+  },
+  "mural-wide": {
+    "width": 944,
+    "height": 415
+  },
+  "post-opening-soon": {
+    "width": 560,
+    "height": 748
+  },
+  "post-hiring": {
+    "width": 748,
+    "height": 736
+  }
+}

@@ -9,6 +9,7 @@ import esbuild from 'esbuild';
 import sharp from 'sharp';
 import { page } from '../src/templates/layout.mjs';
 import { stackedLogo } from '../src/brand/logo.mjs';
+import { widthsFor } from '../src/templates/picture.mjs';
 import { COLORS } from '../src/data/brand.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -74,8 +75,8 @@ function copyFonts() {
 
 const isFresh = (output, input) => fs.existsSync(output) && fs.statSync(output).mtimeMs >= fs.statSync(input).mtimeMs;
 
-// Photos in assets/img become responsive AVIF and WebP at three widths. Skipped when the output is newer.
-export const WIDTHS = [480, 800, 1400];
+// Graded photos in assets/img (made by `npm run photos`) become AVIF and WebP at the widths picture() lists.
+// Skipped when the output is newer than its source.
 async function buildPhotos() {
   if (!fs.existsSync(IMG_SOURCE)) return 0;
   const out = path.join(IMG_OUT, 'r');
@@ -84,7 +85,8 @@ async function buildPhotos() {
   for (const file of sources) {
     const input = path.join(IMG_SOURCE, file);
     const base = file.replace(/\.[^.]+$/, '');
-    for (const width of WIDTHS) {
+    const { width: sourceWidth } = await sharp(input).metadata();
+    for (const width of widthsFor(sourceWidth)) {
       const webp = path.join(out, `${base}-${width}.webp`);
       const avif = path.join(out, `${base}-${width}.avif`);
       if (!isFresh(webp, input)) await sharp(input).resize({ width, withoutEnlargement: true }).webp({ quality: 74, effort: 6 }).toFile(webp);
@@ -103,11 +105,21 @@ async function buildBrand() {
   await sharp(favicon, { density: 300 }).resize(180, 180).png().toFile(path.join(IMG_OUT, 'apple-touch-icon.png'));
   fs.copyFileSync(path.join(ROOT, 'src/brand/logo.svg'), path.join(IMG_OUT, 'logo.svg'));
 
-  // Share card: the stacked logo on cream. Phase 2 swaps in a photo once the shoot exists.
+  // Share card: the stacked logo on a cream panel beside the hero photo (logo only if the photo is missing).
   const og = path.join(IMG_OUT, 'og/home.jpg');
-  const logo = stackedLogo({ standalone: true }).replace('<svg ', '<svg width="560" height="425" ');
-  const card = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630"><rect width="1200" height="630" fill="${COLORS.cream}"/><rect x="24" y="24" width="1152" height="582" fill="none" stroke="${COLORS.gold}" stroke-width="2"/><g transform="translate(320 102)">${logo}</g></svg>`;
-  await sharp(Buffer.from(card)).jpeg({ quality: 82, mozjpeg: true }).toFile(og);
+  const hero = path.join(IMG_SOURCE, 'hero-porchetta.jpg');
+  if (fs.existsSync(hero)) {
+    const logo = stackedLogo({ standalone: true }).replace('<svg ', '<svg width="400" height="304" ');
+    const panel = `<svg xmlns="http://www.w3.org/2000/svg" width="500" height="630"><rect width="500" height="630" fill="${COLORS.cream}"/><rect x="24" y="24" width="452" height="582" fill="none" stroke="${COLORS.gold}" stroke-width="2"/><g transform="translate(50 163)">${logo}</g></svg>`;
+    const photo = await sharp(hero).resize(700, 630, { fit: 'cover', position: 'east' }).toBuffer();
+    await sharp({ create: { width: 1200, height: 630, channels: 3, background: COLORS.cream } })
+      .composite([{ input: Buffer.from(panel), left: 0, top: 0 }, { input: photo, left: 500, top: 0 }])
+      .jpeg({ quality: 82, mozjpeg: true }).toFile(og);
+  } else {
+    const logo = stackedLogo({ standalone: true }).replace('<svg ', '<svg width="560" height="425" ');
+    const card = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630"><rect width="1200" height="630" fill="${COLORS.cream}"/><rect x="24" y="24" width="1152" height="582" fill="none" stroke="${COLORS.gold}" stroke-width="2"/><g transform="translate(320 102)">${logo}</g></svg>`;
+    await sharp(Buffer.from(card)).jpeg({ quality: 82, mozjpeg: true }).toFile(og);
+  }
 }
 
 // A demo: crawlers may fetch pages (so they can see noindex) but nothing should be indexed.

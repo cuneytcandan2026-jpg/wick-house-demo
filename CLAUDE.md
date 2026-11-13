@@ -19,7 +19,9 @@ A pitch demo for Wick House, a specialty coffee and sandwich cafe in Hackney Wic
 - `src/data/brand.mjs`: the palette. `tailwind.config.cjs` reads it; `npm run contrast` checks every text pairing for WCAG AA.
 - `src/brand/`: the vector logo. Regenerate with `npm run logo` (`scripts/make-logo.mjs` traces Jost glyphs; never hand-edit `logo-data.json`). Parts carry classes for the bean journey: `.logo-steam path`, `.logo-cup-fill`, `.logo-wordmark`, `.logo-dash`.
 - `src/templates/layout.mjs`: head, header, mobile sheet, mobile action bar, footer. `src/pages/*.mjs`: page bodies. `src/js/*.js`: each file becomes its own hashed script; a page lists the ones it needs in `scripts`.
-- `assets/img/`: source photos. The build makes AVIF and WebP at 480/800/1400px into `dist/assets/img/r/`.
+- **Photos:** `src/data/photos.mjs` lists every photo (source, crop ratio, grade, alt text). Originals live in `assets/raw/` (`ai/`, `stock/`, `mural/`). `npm run photos` crops and grades them into `assets/img/<key>.jpg` and writes `src/data/photo-sizes.json`; commit all three. The build makes AVIF and WebP at 480/800/1400/2000px (never wider than the source) into `dist/assets/img/r/`.
+- In pages, use `picture('<key>', { sizes, eager })` from `src/templates/picture.mjs`, and never a hand-written `<img>`. Only the hero gets `eager: true`. Menu items find their photo by `img` or `id`.
+- Two crop ratios across the shoot: 4:5 portrait and 3:2 landscape. A new stock photo gets `grade: 'full'` and an entry in `docs/CREDITS.md`.
 
 ## Dev server and screenshots
 - `npm run build`, then `node serve.mjs` (background) serves `dist/` at `http://localhost:3000`. Never screenshot `file:///`. Do not start a second instance if one is running.

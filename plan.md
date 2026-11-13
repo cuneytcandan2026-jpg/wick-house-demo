@@ -152,11 +152,11 @@ Repo `wick-house-demo` in this folder. The pipeline comes from `../../2. CLIENT/
 - [x] Hostinger Git deploy connected: `hostinger` branch → https://wickhouse.laaradigital.co.uk (public_html, auto-deploy on)
 
 ### Phase 2: Images
-- [ ] Higgsfield generations, in priority order, within the 10 credits
-- [ ] Stock photos sourced and graded to match
-- [ ] Mural stills extracted
-- [ ] sharp responsive pipeline (WebP/AVIF)
-- [ ] `docs/CREDITS.md`
+- [x] Higgsfield generations, in priority order, within the 10 credits: all 5 priority shots plus a flat white, using 9.5 credits on Nano Banana 2 (the free plan blocks GPT Image)
+- [x] Stock photos sourced and graded to match: 8 from Pexels (Unsplash blocks scripted downloads), graded with `npm run photos`
+- [x] Mural stills extracted: 3 frames with ffmpeg, cropped clear of the recording's cursor and mute icon
+- [x] sharp responsive pipeline (WebP/AVIF): 480/800/1400/2000, `picture()` helper, `photo-sizes.json` for width/height, and a photo share card
+- [x] `docs/CREDITS.md`
 
 ### Phase 3: Home page
 - [ ] All 12 sections
