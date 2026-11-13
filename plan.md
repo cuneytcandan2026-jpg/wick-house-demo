@@ -149,7 +149,7 @@ Repo `wick-house-demo` in this folder. The pipeline comes from `../../2. CLIENT/
 - [x] `business.mjs` and `menu.mjs` with the placeholder data
 - [x] Layout: nav, mobile sticky bar, footer
 - [x] Hostinger workflow; create the GitHub repo `cuneytcandan2026-jpg/wick-house-demo` and push
-- [ ] **You:** connect Hostinger's Git deploy to the `hostinger` branch on a subdomain you choose
+- [x] Hostinger Git deploy connected: `hostinger` branch → https://wickhouse.laaradigital.co.uk (public_html, auto-deploy on)
 
 ### Phase 2: Images
 - [ ] Higgsfield generations, in priority order, within the 10 credits

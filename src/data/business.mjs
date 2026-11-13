@@ -5,7 +5,7 @@
 // the opening date, the hiring shift and the brand lines come from Wick House's own posts.
 export const BUSINESS = {
   name: 'Wick House',
-  // PLACEHOLDER until the Hostinger subdomain is chosen. Used for og:url and share images.
+  // The demo's Hostinger subdomain. Used for og:url and share images.
   baseUrl: process.env.BASE_URL || 'https://wickhouse.laaradigital.co.uk',
   demo: true,
 
