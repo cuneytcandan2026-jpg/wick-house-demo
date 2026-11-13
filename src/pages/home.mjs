@@ -405,5 +405,6 @@ export default {
   title: 'Wick House | Specialty coffee & sandwiches in Hackney Wick',
   description: 'Specialty coffee, freddo espresso and premium Italian and Greek sandwiches in Hackney Wick, London. Order ahead and skip the queue. Opening 18 November.',
   scripts: ['home', 'lightbox'],
+  brew: true,
   body: [hero, offer, signatures, coffee, orderAhead, loyalty, story, gallery, delivery, hiring, visit, data].join('\n'),
 };

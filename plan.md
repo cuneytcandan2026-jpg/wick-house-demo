@@ -172,10 +172,10 @@ Repo `wick-house-demo` in this folder. The pipeline comes from `../../2. CLIENT/
 - [x] Opening-offer form success state (built in Phase 3: email/WhatsApp switch, validation, voucher)
 
 ### Phase 5: Bean journey
-- [ ] Port the Hackberries module
-- [ ] Logo-completing reveal (cup → steam → wordmark)
-- [ ] Wick House landmarks (5 on desktop, 3 on mobile)
-- [ ] Olive-leaf latte art, gold track, footer buttons, haptic tick
+- [x] Port the Hackberries module (`src/js/brew.js`, `src/css/brew.css`, `src/data/brew.mjs`, `src/templates/brew.mjs`): spring, rolling, landmarks tied to sections, footer reveal by IntersectionObserver, reduced motion, cleanup. Home page only; the menu page shows the finished logo
+- [x] Logo-completing reveal (cup → steam → wordmark): bean drops into the logo cup, it fills with gold crema, then steam, wordmark, gold dash and tagline. The sequence pauses while the logo is off screen, so a quick flick past never plays it unseen. Desktop payoff is two columns so the logo stays visible at the bottom of the page
+- [x] Wick House landmarks (5 on desktop, 3 on mobile: focaccia, stamp, flower)
+- [x] Olive-leaf latte art, gold track, footer buttons, haptic tick (fires when the drop animation ends), plus "Brew again"
 
 ### Phase 6: QA and pitch
 - [ ] Screenshots at 1440px and 390px, at least 2 rounds of fixes

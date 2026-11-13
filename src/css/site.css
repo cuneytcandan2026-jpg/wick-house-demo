@@ -1,3 +1,6 @@
+/* The bean journey's styles. The Tailwind CLI inlines this import. */
+@import './brew.css';
+
 /* Fonts are self-hosted from @fontsource; scripts/build.mjs copies the files into assets/fonts. */
 @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400; font-display: swap; src: url('/assets/fonts/manrope-400.woff2') format('woff2'); }
 @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 600; font-display: swap; src: url('/assets/fonts/manrope-600.woff2') format('woff2'); }
@@ -12,13 +15,16 @@
 
 @layer base {
   :root {
-    --header-h: 64px;
+    /* The header is the nav row plus, on pages with the bean journey, the strip under it (brew.css). */
+    --nav-h: 64px;
+    --strip-h: 0px;
+    --header-h: calc(var(--nav-h) + var(--strip-h));
     --bar-h: 0px;
     --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
     --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .12 0 0 0 0 .17 0 0 0 0 .13 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
   }
-  @media (min-width: 1024px) { :root { --header-h: 76px; } }
+  @media (min-width: 1024px) { :root { --nav-h: 76px; } }
   /* The mobile action bar's height, so nothing hides under it. */
   @media (max-width: 767.98px) { :root { --bar-h: 64px; } }
 
@@ -102,7 +108,7 @@
     backdrop-filter: blur(14px) saturate(1.2);
   }
   .site-header.is-scrolled { box-shadow: 0 1px 0 rgba(30, 43, 34, 0.08), 0 10px 30px -18px rgba(30, 43, 34, 0.35); }
-  .site-header-inner { height: var(--header-h); }
+  .site-header-inner { height: var(--nav-h); }
   .logo-link { @apply inline-flex min-h-11 items-center rounded-md text-forest; }
   .logo-link .logo-lockup { height: 26px; width: auto; }
   @media (min-width: 1024px) { .logo-link .logo-lockup { height: 30px; } }
@@ -176,6 +182,10 @@
   /* The footer runs on under the mobile action bar, so the page never ends on a strip of cream. */
   .site-footer { @apply on-dark-surface; padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom, 0px)); }
   .footer-payoff .logo-stacked { width: min(280px, 70vw); height: auto; color: theme('colors.cream'); }
+  @media (min-width: 1024px) { .footer-payoff .logo-stacked { width: 300px; } }
+  /* A gold hairline between the logo and the headline on wide screens. */
+  .footer-payoff-rule { display: none; }
+  @media (min-width: 1024px) { .footer-payoff-rule { display: block; width: 1px; align-self: stretch; background: linear-gradient(180deg, rgba(201, 150, 43, 0), rgba(201, 150, 43, 0.5), rgba(201, 150, 43, 0)); } }
   .footer-link { @apply inline-flex min-h-11 items-center text-cream/80; transition: color 0.2s ease; }
   .footer-link:hover { @apply text-goldlight; }
   .footer-link:active { @apply opacity-70; }

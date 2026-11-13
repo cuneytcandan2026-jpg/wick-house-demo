@@ -2,6 +2,7 @@
 // In pages the ink is currentColor, so the same mark works on cream and on forest.
 // Class names are hooks for the bean journey: .logo-cup-fill, .logo-steam path, .logo-wordmark, .logo-dash.
 import fs from 'fs';
+import { beanDefs, beanShapes, oliveArt } from '../templates/brew.mjs';
 
 const L = JSON.parse(fs.readFileSync(new URL('./logo-data.json', import.meta.url), 'utf8'));
 const { cup } = L;
@@ -10,16 +11,38 @@ const cupParts = ({ ink, steam = true, fill = false }) => `${steam ? `<g class="
 <path class="logo-cup-fill" d="${cup.inside}" fill="${fill ? ink : 'none'}"/>
 <g class="logo-cup" fill="none" stroke="${ink}" stroke-width="${cup.stroke}" stroke-linejoin="round" stroke-linecap="round"><path d="${cup.bowl}"/><path d="${cup.handle}"/></g>`;
 
+// The footer's version of the cup: everything the bean journey animates, in the logo's cup coordinates.
+// Back to front: steam, the crema (clipped to the inside of the cup) with olive-leaf latte art, the splash,
+// the falling bean (clipped so it vanishes below the rim), the cup outline, and an invisible target the
+// flying bean is steered to. The resting markup is the finished cup, so without JavaScript nothing is missing.
+const brewCup = (ink) => `<g class="brew-cup-rig">
+<defs>${beanDefs('logo')}
+<clipPath id="brew-inside"><path d="${cup.inside}"/></clipPath>
+<clipPath id="brew-above-rim"><rect x="-80" y="-200" width="260" height="271"/></clipPath>
+<linearGradient id="brew-crema" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--crema-hi)"/><stop offset="0.45" style="stop-color:var(--crema)"/><stop offset="1" style="stop-color:var(--crema-deep)"/></linearGradient>
+</defs>
+<g class="logo-steam" fill="none" stroke="${ink}" stroke-width="${cup.steamStroke}" stroke-linecap="round">${cup.steam.map((d, i) => `<path class="logo-steam-${i + 1}" style="--k:${i}" d="${d}" pathLength="1"/>`).join('')}</g>
+<g clip-path="url(#brew-inside)">
+  <g class="brew-liquid"><path fill="url(#brew-crema)" d="M-18 75q7-2.6 14 0t14 0 14 0 14 0 14 0 14 0 14 0 14 0 14 0V128H-18Z"/></g>
+  <g class="brew-art" fill="none">${oliveArt()}</g>
+</g>
+<ellipse class="brew-splash" cx="50" cy="70" rx="18" ry="5"/>
+<g clip-path="url(#brew-above-rim)"><g class="brew-drop"><g transform="translate(38.8 18.8) scale(0.7)">${beanShapes('logo')}</g></g></g>
+<g class="logo-cup" fill="none" stroke="${ink}" stroke-width="${cup.stroke}" stroke-linejoin="round" stroke-linecap="round"><path d="${cup.bowl}"/><path d="${cup.handle}"/></g>
+<circle class="brew-target" cx="50" cy="30" r="11.2" fill="none"/>
+</g>`;
+
 const a11y = (title) => (title ? `role="img" aria-label="${title}"` : 'aria-hidden="true" focusable="false"');
 
 // The full stacked logo: steam, cup, WICK / HOUSE, dash and tagline.
-export function stackedLogo({ cls = '', title = 'Wick House', standalone = false, background = '', tagline = true } = {}) {
+// brew: true draws the footer version, with the parts the bean journey fills in (see brewCup).
+export function stackedLogo({ cls = '', title = 'Wick House', standalone = false, background = '', tagline = true, brew = false } = {}) {
   const s = L.stacked;
   const ink = standalone ? L.colors.ink : 'currentColor';
   const [vx, vy, vw, vh] = s.viewBox.split(' ').map(Number);
   const box = tagline ? s.viewBox : `${vx} ${vy} ${vw} ${s.dash.y + s.dash.h + 24 - vy}`;
   return `<svg ${standalone ? 'xmlns="http://www.w3.org/2000/svg" ' : ''}class="logo logo-stacked ${cls}" viewBox="${box}" ${a11y(title)}>${background ? `<rect x="${vx}" y="${vy}" width="${vw}" height="${vh}" fill="${background}"/>` : ''}
-<g class="logo-mark" transform="translate(${s.cup.x} ${s.cup.y}) scale(${s.cup.s})">${cupParts({ ink })}</g>
+<g class="logo-mark" transform="translate(${s.cup.x} ${s.cup.y}) scale(${s.cup.s})">${brew ? brewCup(ink) : cupParts({ ink })}</g>
 <g class="logo-wordmark" fill="${ink}"><path d="${s.wick}"/><path d="${s.house}"/></g>
 <rect class="logo-dash" x="${s.dash.x}" y="${s.dash.y}" width="${s.dash.w}" height="${s.dash.h}" fill="${ink}"/>
 ${tagline ? `<g class="logo-tagline" fill="${ink}">${s.tagline.map((d) => `<path d="${d}"/>`).join('')}${s.bullets.map((b) => `<circle cx="${b.cx}" cy="${b.cy}" r="${b.r}"/>`).join('')}</g>` : ''}
