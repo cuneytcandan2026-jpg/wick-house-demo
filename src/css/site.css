@@ -1,0 +1,194 @@
+/* Fonts are self-hosted from @fontsource; scripts/build.mjs copies the files into assets/fonts. */
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400; font-display: swap; src: url('/assets/fonts/manrope-400.woff2') format('woff2'); }
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 600; font-display: swap; src: url('/assets/fonts/manrope-600.woff2') format('woff2'); }
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 700; font-display: swap; src: url('/assets/fonts/manrope-700.woff2') format('woff2'); }
+@font-face { font-family: 'Jost'; font-style: normal; font-weight: 400; font-display: swap; src: url('/assets/fonts/jost-400.woff2') format('woff2'); }
+@font-face { font-family: 'Jost'; font-style: normal; font-weight: 500; font-display: swap; src: url('/assets/fonts/jost-500.woff2') format('woff2'); }
+@font-face { font-family: 'Caveat'; font-style: normal; font-weight: 600; font-display: swap; src: url('/assets/fonts/caveat-600.woff2') format('woff2'); }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --header-h: 64px;
+    --bar-h: 0px;
+    --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .12 0 0 0 0 .17 0 0 0 0 .13 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
+  }
+  @media (min-width: 1024px) { :root { --header-h: 76px; } }
+  /* The mobile action bar's height, so nothing hides under it. */
+  @media (max-width: 767.98px) { :root { --bar-h: 64px; } }
+
+  html {
+    scroll-padding-top: calc(var(--header-h) + 12px);
+    scroll-padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom, 0px) + 12px);
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+  body {
+    @apply bg-cream font-body text-forest antialiased;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+    /* A light grain over the cream, as on the printed posters. */
+    background-image: var(--grain);
+  }
+  h1, h2, h3, h4 { @apply font-display font-medium; line-height: 1.1; letter-spacing: -0.02em; text-wrap: balance; }
+  h1 { letter-spacing: -0.03em; }
+  ::selection { @apply bg-gold text-forest; }
+
+  a, button, input, select, textarea, summary { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline: 3px solid theme('colors.golddark'); outline-offset: 3px; border-radius: 6px; }
+  .on-dark :focus-visible { outline-color: theme('colors.goldlight'); }
+}
+
+@layer components {
+  /* ---------- Dark surfaces ---------- */
+  .on-dark-surface {
+    @apply bg-forest text-cream;
+    background-image: var(--grain), radial-gradient(60rem 30rem at 85% -10%, rgba(47, 74, 53, 0.9), transparent 70%), radial-gradient(40rem 24rem at 0% 110%, rgba(201, 150, 43, 0.10), transparent 70%);
+  }
+
+  .container-page { @apply mx-auto w-full max-w-page px-4 sm:px-6 lg:px-10; }
+
+  /* Wide-tracked capitals, as in the logo's tagline. */
+  .label { @apply font-display text-xs font-medium uppercase tracking-label text-moss; }
+  .on-dark .label { @apply text-sage; }
+  /* The dash under the logo's wordmark, as a section marker. */
+  .dash { @apply block h-[3px] w-10 rounded-full bg-gold; }
+  .hand { @apply font-hand text-2xl font-semibold leading-none text-golddark; }
+  .on-dark .hand { @apply text-goldlight; }
+
+  /* ---------- Buttons: pills. Primary is forest, with a gold arrow that slides on hover. ---------- */
+  .btn {
+    @apply relative inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3 font-display text-sm font-medium uppercase tracking-wide2;
+    transition: transform 0.35s var(--ease-spring), background-color 0.2s ease, color 0.2s ease, box-shadow 0.3s ease;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn .arrow { transition: transform 0.35s var(--ease-spring); }
+  .btn:hover .arrow { transform: translateX(4px); }
+  .btn-primary { @apply bg-forest text-cream shadow-base; }
+  .btn-primary .arrow { @apply text-gold; }
+  .btn-primary:hover { @apply bg-deepgreen shadow-lifted; transform: translateY(-2px); }
+  .btn-primary:active { transform: translateY(0) scale(0.97); }
+  .btn-outline { @apply text-forest; box-shadow: inset 0 0 0 1.5px theme('colors.forest'); }
+  .btn-outline:hover { @apply bg-forest text-cream; }
+  .btn-gold { @apply bg-gold text-forest shadow-gold; }
+  .btn-gold:hover { @apply bg-goldlight; transform: translateY(-2px); }
+  .btn-gold:active { transform: translateY(0) scale(0.97); }
+  .on-dark .btn-outline, .btn-outline-light { @apply text-cream; box-shadow: inset 0 0 0 1.5px rgba(245, 240, 227, 0.7); }
+  .on-dark .btn-outline:hover, .btn-outline-light:hover { @apply bg-cream text-forest; }
+
+  .text-link { @apply font-semibold text-forest underline decoration-gold decoration-2 underline-offset-4; transition: text-decoration-color 0.2s ease, color 0.2s ease; }
+  .text-link:hover { @apply text-deepgreen decoration-forest; }
+  .text-link:active { @apply opacity-70; }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: sticky; top: 0; z-index: 50; height: var(--header-h);
+    @apply text-forest;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .site-header::before {
+    content: ''; position: absolute; inset: 0; z-index: -1;
+    background: rgba(245, 240, 227, 0.82);
+    -webkit-backdrop-filter: blur(14px) saturate(1.2);
+    backdrop-filter: blur(14px) saturate(1.2);
+  }
+  .site-header.is-scrolled { box-shadow: 0 1px 0 rgba(30, 43, 34, 0.08), 0 10px 30px -18px rgba(30, 43, 34, 0.35); }
+  .site-header-inner { height: var(--header-h); }
+  .logo-link { @apply inline-flex min-h-11 items-center rounded-md text-forest; }
+  .logo-link .logo-lockup { height: 26px; width: auto; }
+  @media (min-width: 1024px) { .logo-link .logo-lockup { height: 30px; } }
+  .logo { display: block; overflow: visible; }
+  .logo-link .logo-steam path { transform-box: fill-box; transform-origin: 50% 100%; }
+  @media (prefers-reduced-motion: no-preference) {
+    .logo-link:hover .logo-steam path { animation: steam 1.6s ease-in-out infinite; }
+    .logo-link:hover .logo-steam path:nth-child(2) { animation-delay: 0.2s; }
+    .logo-link:hover .logo-steam path:nth-child(3) { animation-delay: 0.4s; }
+  }
+  @keyframes steam {
+    0%, 100% { transform: translateY(0) scaleY(1); opacity: 1; }
+    50% { transform: translateY(-6%) scaleY(1.08); opacity: 0.55; }
+  }
+
+  .nav-link {
+    @apply relative inline-flex min-h-11 items-center px-3 font-display text-[0.8rem] font-medium uppercase tracking-wide2 text-forest;
+    transition: color 0.2s ease;
+  }
+  .nav-link::after {
+    content: ''; position: absolute; left: 0.75rem; right: 0.75rem; bottom: 8px; height: 2px; border-radius: 2px;
+    @apply bg-gold;
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.35s var(--ease-out);
+  }
+  .nav-link:hover::after, .nav-link[aria-current='page']::after, .nav-link[aria-current='location']::after { transform: scaleX(1); }
+  .nav-link:hover { @apply text-deepgreen; }
+  .nav-link:active { @apply opacity-70; }
+
+  .menu-toggle { @apply inline-flex h-12 w-12 items-center justify-center rounded-full text-forest; transition: background-color 0.2s ease, transform 0.2s ease; }
+  .menu-toggle:hover { background: rgba(30, 43, 34, 0.07); }
+  .menu-toggle:active { transform: scale(0.94); background: rgba(30, 43, 34, 0.12); }
+
+  /* Mobile sheet: forest, big Jost links, a handwritten note beside each. */
+  .mobile-nav {
+    @apply on-dark-surface fixed inset-x-0 bottom-0 z-40 flex-col overflow-y-auto px-6 pb-10 pt-6;
+    top: var(--header-h);
+    padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom, 0px) + 2rem);
+    animation: sheet-in 0.4s var(--ease-out);
+  }
+  @keyframes sheet-in { from { opacity: 0; transform: translateY(-12px); } }
+  .sheet-link {
+    @apply flex min-h-14 items-baseline justify-between gap-4 border-b border-white/10 py-3 font-display text-2xl font-normal uppercase tracking-wide2 text-cream sm:text-3xl;
+    transition: transform 0.3s var(--ease-spring), color 0.2s ease;
+  }
+  .sheet-link::after { content: attr(data-note); @apply whitespace-nowrap font-hand text-xl normal-case tracking-normal text-goldlight; }
+  .sheet-link:hover { @apply text-white; transform: translateX(4px); }
+  .sheet-link:active { transform: translateX(1px); }
+
+  /* ---------- Mobile action bar ---------- */
+  .action-bar {
+    @apply on-dark-surface fixed inset-x-0 bottom-0 z-50 grid grid-cols-3;
+    height: calc(var(--bar-h) + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    box-shadow: 0 -12px 30px -16px rgba(30, 43, 34, 0.6);
+    transition: transform 0.3s var(--ease-out);
+  }
+  .action-bar a {
+    @apply flex flex-col items-center justify-center gap-0.5 font-display text-[0.7rem] font-medium uppercase tracking-wide2 text-cream;
+    transition: background-color 0.2s ease;
+  }
+  .action-bar a:hover { background: rgba(245, 240, 227, 0.08); }
+  .action-bar a:active { background: rgba(245, 240, 227, 0.16); }
+  .action-bar a.is-primary { @apply bg-gold text-forest; }
+  .action-bar a.is-primary:hover { @apply bg-goldlight; }
+  .action-bar a:focus-visible { outline-offset: -4px; }
+  /* Steps aside while a field has focus, so it never covers what is being typed. */
+  body.typing .action-bar { transform: translateY(110%); }
+
+  /* ---------- Footer ---------- */
+  /* The footer runs on under the mobile action bar, so the page never ends on a strip of cream. */
+  .site-footer { @apply on-dark-surface; padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom, 0px)); }
+  .footer-payoff .logo-stacked { width: min(280px, 70vw); height: auto; color: theme('colors.cream'); }
+  .footer-link { @apply inline-flex min-h-11 items-center text-cream/80; transition: color 0.2s ease; }
+  .footer-link:hover { @apply text-goldlight; }
+  .footer-link:active { @apply opacity-70; }
+  .hours-row { @apply flex items-baseline justify-between gap-4 border-b border-white/10 py-2; }
+  .hours-row.is-today { @apply text-goldlight; }
+  .today-tag { @apply rounded-full bg-gold px-2 py-0.5 font-display text-[0.65rem] uppercase tracking-wide2 text-forest; }
+
+  .demo-note { @apply rounded-card border border-dashed border-sage/40 px-4 py-3 text-sm text-cream/80; }
+
+  /* ---------- Placeholder section shells (filled in Phase 3) ---------- */
+  .section { @apply py-20 lg:py-28; }
+}
+
+@layer utilities {
+  html:not(.js) .js-only { display: none !important; }
+  /* Scroll reveals: only below-the-fold elements get hidden, and only by site.js. */
+  .reveal-pending { opacity: 0; transform: translateY(24px); }
+  .reveal-in { opacity: 1; transform: none; transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out); }
+}
