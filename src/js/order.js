@@ -515,18 +515,20 @@
   function fromLink() {
     const params = new URLSearchParams(location.search);
     const id = params.get('add');
-    let opened = false;
-    if (id !== null) {
-      params.delete('add');
-      const rest = params.toString();
-      history.replaceState(null, '', `${location.pathname}${rest ? `?${rest}` : ''}${location.hash}`);
-      if (ITEMS[id]) {
-        add(id);
-        openPad();
-        opened = true;
-      }
+    const wantsPad = location.hash === '#order';
+    params.delete('add');
+    const rest = params.toString();
+    // Drop ?add and #order once handled. Left in the URL, #order makes the browser scroll to its
+    // anchor after load, which takes focus back out of the open pad.
+    if (id !== null || wantsPad) {
+      history.replaceState(null, '', `${location.pathname}${rest ? `?${rest}` : ''}${wantsPad ? '' : location.hash}`);
     }
-    if (!opened && location.hash === '#order') startOrder();
+    if (id !== null && ITEMS[id]) {
+      add(id);
+      openPad();
+    } else if (wantsPad) {
+      startOrder();
+    }
   }
   window.addEventListener('hashchange', () => { if (location.hash === '#order') startOrder(); });
 

@@ -178,12 +178,12 @@ Repo `wick-house-demo` in this folder. The pipeline comes from `../../2. CLIENT/
 - [x] Olive-leaf latte art, gold track, footer buttons, haptic tick (fires when the drop animation ends), plus "Brew again"
 
 ### Phase 6: QA and pitch
-- [ ] Screenshots at 1440px and 390px, at least 2 rounds of fixes
-- [ ] axe-core: no serious violations
-- [ ] Lighthouse: mobile LCP under 2.5s, no layout shift, no horizontal scroll at 360px
-- [ ] Test on a real phone through the live URL
-- [ ] `docs/PITCH-NOTES.md`: map each feature to its revenue benefit (queue-skipping at the 7am rush, an owned customer list instead of only Instagram, repeat visits from loyalty, delivery reach), and list what they need to send (menu, prices, photos, address, hours, payment/POS provider)
-- [ ] Final push
+- [x] Screenshots at 1440px and 390px, 3 rounds: full pages, then the open states (`npm run qa:states`): menu sheet, offer error and success, lightbox, order pad and review. Fixed: pad lost focus when opened from a `?add=…#order` link (the browser's fragment scroll took it back out); consent label and text links raised to 44px tap targets
+- [x] axe-core: 0 violations on both pages at 1440/390/360px and in every open state (`npm run qa`). Fixed: Visit `<dl>` grouping; signature "Add to order" accessible name now starts with its visible text
+- [x] Lighthouse (mobile, simulated slow 4G): home LCP 2.35–2.4s, menu 1.6–1.7s, CLS 0, accessibility 100, best practices 100 (SEO 66 only because of the demo noindex). No horizontal scroll at 360px. Fixed: CSS inlined (removes the render-blocking request), reveal loop no longer forces a layout per element (185ms → 6ms)
+- [ ] Test on a real phone through the live URL (needs a person with a phone: see Verification below)
+- [x] `docs/PITCH-NOTES.md`: demo script, feature → revenue table, quality numbers, real vs placeholder, what they need to send, and the path from demo to launch
+- [x] Final push
 
 ## Verification
 - `npm run build` then `node serve.mjs`. Screenshot desktop and mobile with `screenshot.mjs`, then read the PNGs.

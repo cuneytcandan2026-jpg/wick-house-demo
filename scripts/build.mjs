@@ -42,9 +42,13 @@ function buildCss() {
     '-o', tmp,
     '--minify',
   ], { stdio: ['ignore', 'ignore', 'inherit'], cwd: ROOT });
-  const css = fs.readFileSync(tmp);
+  const css = fs.readFileSync(tmp, 'utf8');
   fs.unlinkSync(tmp);
-  return writeHashed('assets/css', 'site', 'css', css);
+  // The stylesheet is inlined into each page: on a phone that saves the render-blocking round trip
+  // before the hero can paint (about 16 KB gzipped, and the site has only two pages).
+  fs.rmSync(path.join(OUT, 'assets/css'), { recursive: true, force: true });
+  if (/<\/style/i.test(css)) throw new Error('site.css contains "</style", which would end the inline <style> early.');
+  return css;
 }
 
 // Every file in src/js becomes its own minified, hashed script. Pages list the ones they need.
@@ -165,4 +169,4 @@ for (const [name, file] of Object.entries(PAGES)) {
 }
 fs.writeFileSync(path.join(OUT, 'robots.txt'), ROBOTS);
 fs.writeFileSync(path.join(OUT, '.htaccess'), HTACCESS);
-console.log(`Built ${Object.keys(PAGES).length} pages and ${photos} photos to ${path.relative(ROOT, OUT) || '.'}. CSS ${assets.css}`);
+console.log(`Built ${Object.keys(PAGES).length} pages and ${photos} photos to ${path.relative(ROOT, OUT) || '.'}. CSS ${(assets.css.length / 1024).toFixed(0)} KB inlined.`);

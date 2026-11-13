@@ -150,7 +150,7 @@ ${B.demo ? '<meta name="robots" content="noindex, nofollow" />' : `<link rel="ca
 <link rel="preload" href="/assets/fonts/manrope-400.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/assets/fonts/jost-500.woff2" as="font" type="font/woff2" crossorigin />
 ${preloads}
-<link rel="stylesheet" href="/assets/css/${assets.css}" />
+<style>${assets.css}</style>
 ${scriptTags}
 </head>
 <body>

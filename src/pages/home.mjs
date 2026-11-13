@@ -117,7 +117,7 @@ const sigCard = (item, i) => `<li class="sig-item" data-reveal style="--reveal-d
         <p class="price">${formatPrice(item.price)}</p>
       </div>
       <p class="mt-2 flex-1 text-sm">${esc(item.desc)}</p>
-      <a href="${addHref(item)}" class="btn btn-add mt-5" aria-label="Add ${esc(item.name)} to your order">${icon('bag', 18)} Add to order</a>
+      <a href="${addHref(item)}" class="btn btn-add mt-5">${icon('bag', 18)} Add to order<span class="sr-only">: ${esc(item.name)}</span></a>
     </div>
   </article>
 </li>`;
@@ -372,8 +372,8 @@ const visit = `<section id="visit" class="section visit" aria-labelledby="visit-
       ${head({ id: 'visit', label: 'Visit us', title: 'Find us in Hackney Wick.' })}
       <p class="status-pill mt-6" data-status-pill><span class="status-dot" data-status-dot></span><span data-status-text>Opening ${esc(B.openingLabel)}</span></p>
       <dl class="mt-8 space-y-6">
-        <div class="flex gap-4">${icon('pin', 22, 'mt-1 shrink-0 text-golddark')}<div><dt class="label">Address</dt><dd class="mt-1 text-lg">${esc(addressLine())}<br /><span class="text-moss">${esc(B.landmark.replace(/^a/, 'A'))}</span></dd></div></div>
-        <div class="flex gap-4">${icon('clock', 22, 'mt-1 shrink-0 text-golddark')}<div class="flex-1"><dt class="label">Opening hours</dt><dd class="mt-1"><ul>${hoursRows()}</ul></dd></div></div>
+        <div class="relative pl-10"><dt class="label">${icon('pin', 22, 'absolute left-0 top-1 text-golddark')}Address</dt><dd class="mt-1 text-lg">${esc(addressLine())}<br /><span class="text-moss">${esc(B.landmark.replace(/^a/, 'A'))}</span></dd></div>
+        <div class="relative pl-10"><dt class="label">${icon('clock', 22, 'absolute left-0 top-1 text-golddark')}Opening hours</dt><dd class="mt-1"><ul>${hoursRows()}</ul></dd></div>
       </dl>
       <div class="mt-8 flex flex-wrap gap-3">
         <a href="${B.directionsUrl}" rel="noopener" class="btn btn-primary">${icon('pin', 18)} Get directions</a>

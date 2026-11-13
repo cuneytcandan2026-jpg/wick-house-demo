@@ -14,7 +14,7 @@ A pitch demo for Wick House, a specialty coffee and sandwich cafe in Hackney Wic
 - Never commit `dist/`. Never push to `hostinger` by hand.
 
 ## Source layout
-- **Edit `src/`, then `npm run build`.** Output goes to `dist/` (`index.html`, `menu/index.html`, assets with hashed names).
+- **Edit `src/`, then `npm run build`.** Output goes to `dist/` (`index.html`, `menu/index.html`, scripts with hashed names). The stylesheet is inlined into each page's `<style>` to save a render-blocking request on phones (it keeps mobile LCP under 2.5s), so it never contains `</style`.
 - `src/data/business.mjs`: every business fact. `src/data/menu.mjs`: every dish and price. Swapping the real menu is a one-file edit.
 - `src/data/brand.mjs`: the palette. `tailwind.config.cjs` reads it; `npm run contrast` checks every text pairing for WCAG AA.
 - `src/brand/`: the vector logo. Regenerate with `npm run logo` (`scripts/make-logo.mjs` traces Jost glyphs; never hand-edit `logo-data.json`). Parts carry classes for the bean journey: `.logo-steam path`, `.logo-cup-fill`, `.logo-wordmark`, `.logo-dash`.
@@ -50,4 +50,6 @@ A pitch demo for Wick House, a specialty coffee and sandwich cafe in Hackney Wic
 charset, viewport, title, description, og:title/description/type/url/image, and `<meta name="robots" content="noindex, nofollow">` while `BUSINESS.demo` is true. The CI build fails if a page loses noindex.
 
 ## Accessibility
-- WCAG AA contrast (`npm run contrast`). Semantic HTML: `<nav>`, `<main>`, `<button>`, never a `<div>` for clicks. Descriptive `alt` on all images. Visible focus rings. 44×44px minimum touch targets. axe-core is installed for Phase 6.
+- WCAG AA contrast (`npm run contrast`). Semantic HTML: `<nav>`, `<main>`, `<button>`, never a `<div>` for clicks. Descriptive `alt` on all images. Visible focus rings. 44×44px minimum touch targets.
+- With the dev server running: `npm run qa` (axe-core on both pages at 1440/390/360px, plus horizontal overflow) and `npm run qa:states -- http://localhost:3000 390` (axe and screenshots with the menu sheet, offer form, lightbox and order pad open). Both must pass before a push.
+- In scripts, read layout before writing classes; a read after each write forces a layout per element.

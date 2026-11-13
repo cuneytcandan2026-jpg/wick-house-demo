@@ -60,8 +60,10 @@
         observer.unobserve(entry.target);
       });
     }, { rootMargin: '0px 0px -8% 0px' });
-    document.querySelectorAll('[data-reveal]').forEach((el) => {
-      if (el.getBoundingClientRect().top < window.innerHeight) return;
+    // Read every position first, then write: interleaving them forced a layout per element.
+    const fold = window.innerHeight;
+    const below = [...document.querySelectorAll('[data-reveal]')].filter((el) => el.getBoundingClientRect().top >= fold);
+    below.forEach((el) => {
       el.classList.add('reveal-pending');
       observer.observe(el);
     });
