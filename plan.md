@@ -148,7 +148,7 @@ Repo `wick-house-demo` in this folder. The pipeline comes from `../../2. CLIENT/
 - [x] `CLAUDE.md` with guardrails, deploy rules and screenshot workflow
 - [x] `business.mjs` and `menu.mjs` with the placeholder data
 - [x] Layout: nav, mobile sticky bar, footer
-- [ ] Hostinger workflow; create the GitHub repo `cuneytcandan2026-jpg/wick-house-demo` and push (workflow written and committed; repo creation and push still to do)
+- [x] Hostinger workflow; create the GitHub repo `cuneytcandan2026-jpg/wick-house-demo` and push
 - [ ] **You:** connect Hostinger's Git deploy to the `hostinger` branch on a subdomain you choose
 
 ### Phase 2: Images
