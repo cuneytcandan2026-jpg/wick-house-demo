@@ -167,8 +167,8 @@ Repo `wick-house-demo` in this folder. The pipeline comes from `../../2. CLIENT/
 - [x] Scroll reveals
 
 ### Phase 4: Menu and order-ahead
-- [ ] Menu page: tabs, search, dietary filters
-- [ ] Order pad with collection time slots and WhatsApp hand-off
+- [x] Menu page: tabs, search, dietary filters (sticky bar; category tabs with #hash links; search across the whole menu; vegetarian/vegan; drawn forest tiles for dishes without a photo)
+- [x] Order pad with collection time slots and WhatsApp hand-off (drawer / bottom sheet; oat milk and extra shot add-ons; UK-time slots from business.mjs, never before opening day; message preview, then wa.me; `?add=<id>#order` from the home cards; saved on the device)
 - [x] Opening-offer form success state (built in Phase 3: email/WhatsApp switch, validation, voucher)
 
 ### Phase 5: Bean journey
