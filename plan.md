@@ -159,17 +159,17 @@ Repo `wick-house-demo` in this folder. The pipeline comes from `../../2. CLIENT/
 - [x] `docs/CREDITS.md`
 
 ### Phase 3: Home page
-- [ ] All 12 sections
-- [ ] Countdown and open/closed badge
-- [ ] Hot/iced toggle
-- [ ] Loyalty stamp card animation
-- [ ] Gallery lightbox
-- [ ] Scroll reveals
+- [x] All 12 sections (footer from the layout). Signature cards link to `/menu/?add=<id>#order` for the Phase 4 order pad to pick up
+- [x] Countdown and open/closed badge (hero card and Visit pill; switches to live UK-time status at 07:00 on 18 Nov)
+- [x] Hot/iced toggle (ARIA tabs, iced first so the freddo leads)
+- [x] Loyalty stamp card animation
+- [x] Gallery lightbox (native dialog, arrows, swipe, focus return)
+- [x] Scroll reveals
 
 ### Phase 4: Menu and order-ahead
 - [ ] Menu page: tabs, search, dietary filters
 - [ ] Order pad with collection time slots and WhatsApp hand-off
-- [ ] Opening-offer form success state
+- [x] Opening-offer form success state (built in Phase 3: email/WhatsApp switch, validation, voucher)
 
 ### Phase 5: Bean journey
 - [ ] Port the Hackberries module

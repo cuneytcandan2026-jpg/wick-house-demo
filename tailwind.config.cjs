@@ -22,6 +22,8 @@ module.exports = {
       letterSpacing: { label: '0.22em', wide2: '0.12em' },
       maxWidth: { page: '76rem', prose: '38rem' },
       borderRadius: { card: '1.25rem' },
+      // The shoot's two crop ratios.
+      aspectRatio: { portrait: '4 / 5', land: '3 / 2' },
       boxShadow: {
         // Tinted with forest, layered, low opacity. base sits on the page, lifted floats over it.
         base: '0 1px 2px rgba(30,43,34,0.06), 0 8px 24px -10px rgba(30,43,34,0.18)',
