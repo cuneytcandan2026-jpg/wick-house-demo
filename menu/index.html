@@ -26,8 +26,10 @@
 <link rel="preload" href="/assets/fonts/manrope-400.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="/assets/fonts/jost-500.woff2" as="font" type="font/woff2" crossorigin />
 
-<link rel="stylesheet" href="/assets/css/site.fb2a3ff0f0.css" />
+<link rel="stylesheet" href="/assets/css/site.245abb104c.css" />
 <script src="/assets/js/site.65bf819af8.js" defer></script>
+<script src="/assets/js/menu.8348bc9a88.js" defer></script>
+<script src="/assets/js/order.01cb7bc89e.js" defer></script>
 </head>
 <body>
 <a href="#main-content" class="sr-only rounded-full bg-forest px-4 py-2 font-semibold text-cream focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50">Skip to content</a>
@@ -58,282 +60,641 @@
       </div>
 </nav>
 <main id="main-content" tabindex="-1">
-<div class="container-page py-14">
-  <p class="label">The menu</p>
-  <span class="dash mt-3"></span>
-  <h1 class="mt-4 text-5xl md:text-6xl">Eat, drink, repeat.</h1>
-  <div id="order"></div>
-  <section id="sandwiches" class="py-10" aria-labelledby="sandwiches-title">
-  <h2 id="sandwiches-title" class="text-3xl">Signature Sandwiches</h2>
-  <p class="mt-1 text-moss">Focaccia and ciabatta baked fresh each morning, filled to order.</p>
-  <ul class="mt-6 grid gap-x-10 gap-y-6 md:grid-cols-2">
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Mortadella &amp; burrata focaccia</h3>
-        <span class="font-display font-medium">£11.50</span>
-      </div>
-      <p class="mt-1 text-sm">Mortadella, a whole burrata and pistachio pesto on rosemary focaccia.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Signature</span><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">New</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Porchetta ciabatta</h3>
-        <span class="font-display font-medium">£11.00</span>
-      </div>
-      <p class="mt-1 text-sm">Slow-roast porchetta, salsa verde and rocket in a toasted ciabatta.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Signature</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Prosciutto, mozzarella &amp; fig</h3>
-        <span class="font-display font-medium">£10.50</span>
-      </div>
-      <p class="mt-1 text-sm">Prosciutto crudo, fior di latte and fig jam on focaccia.</p>
-      
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Caprese</h3>
-        <span class="font-display font-medium">£9.00</span>
-      </div>
-      <p class="mt-1 text-sm">Heritage tomato, buffalo mozzarella, basil and good olive oil on ciabatta.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Signature</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Chicken souvlaki pita</h3>
-        <span class="font-display font-medium">£10.50</span>
-      </div>
-      <p class="mt-1 text-sm">Charred lemon-oregano chicken, tzatziki, red onion and tomato in a warm pita.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Signature</span><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Greek classic</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Greek lamb, feta &amp; olive</h3>
-        <span class="font-display font-medium">£11.50</span>
-      </div>
-      <p class="mt-1 text-sm">Slow-cooked lamb, crumbled feta, kalamata olives and oregano on ciabatta.</p>
-      
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Halloumi, roast pepper &amp; honey</h3>
-        <span class="font-display font-medium">£9.50</span>
-      </div>
-      <p class="mt-1 text-sm">Grilled halloumi, sweet roast peppers, rocket and a drizzle of thyme honey.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Roast veg, hummus &amp; tapenade</h3>
-        <span class="font-display font-medium">£9.00</span>
-      </div>
-      <p class="mt-1 text-sm">Roast courgette, aubergine and pepper with hummus and black olive tapenade.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegan</span></p>
-    </li>
-  </ul>
+<section class="menu-hero relative overflow-hidden" aria-labelledby="menu-title">
+  <svg aria-hidden="true" focusable="false" class="menu-hero-sprig" viewBox="0 0 140 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 40C34 34 72 22 136 6"/><path transform="translate(18 37) rotate(-58) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(32 34) rotate(18) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(48 30) rotate(-62) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(62 26) rotate(14) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(78 22) rotate(-64) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(92 18) rotate(10) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(106 14) rotate(-66) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(118 10) rotate(6) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(130 7) rotate(-24) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/></svg>
+  <div class="container-page relative grid items-center gap-10 pb-10 pt-10 lg:grid-cols-12 lg:pb-14 lg:pt-16">
+    <div class="lg:col-span-7">
+      <p class="label">The menu &middot; order ahead</p>
+      <span class="dash mt-3"></span>
+      <h1 id="menu-title" class="mt-5 text-5xl md:text-6xl">Eat, drink, repeat.</h1>
+      <p class="mt-5 max-w-prose text-lg">Italian and Greek sandwiches, breakfast, coffee hot or iced, and something sweet. Order ahead, pick a collection time and skip the queue.</p>
+      <ol class="menu-steps js-only mt-7" role="list">
+        <li><span class="menu-step-num">1</span><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>Add</li><li><span class="menu-step-num">2</span><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Pick a time</li><li><span class="menu-step-num">3</span><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.8z"/><path d="M9 9.5c.3 2 2.2 4.2 4.6 4.8l1.2-1.3 1.7.9c-.4 1.1-1.4 1.8-2.5 1.6-3-.6-5.6-3.2-6.2-6.2-.2-1.1.5-2.1 1.6-2.5l.9 1.7z"/></svg>Send on WhatsApp</li>
+      </ol>
+      <noscript><p class="mt-6">To order ahead, call us on <a class="text-link" href="tel:+442079460123">020 7946 0123</a>.</p></noscript>
+      <p class="mt-6 text-sm text-moss">Allergies or dietary needs? Tell us in your order note or at the counter. Sample menu and prices for this demo.</p>
+    </div>
+    <div class="menu-hero-media hidden lg:col-span-5 lg:block">
+      <div class="photo aspect-portrait menu-hero-a"><picture><source type="image/avif" srcset="/assets/img/r/mortadella-focaccia-480.avif 480w, /assets/img/r/mortadella-focaccia-800.avif 800w, /assets/img/r/mortadella-focaccia-921.avif 921w" sizes="22vw"><source type="image/webp" srcset="/assets/img/r/mortadella-focaccia-480.webp 480w, /assets/img/r/mortadella-focaccia-800.webp 800w, /assets/img/r/mortadella-focaccia-921.webp 921w" sizes="22vw"><img src="/assets/img/r/mortadella-focaccia-800.webp" width="921" height="1151" alt="A rosemary focaccia sandwich filled with mortadella, burrata and pistachio pesto, topped with crushed pistachios" loading="lazy" decoding="async"></picture></div>
+      <div class="photo aspect-portrait menu-hero-b"><picture><source type="image/avif" srcset="/assets/img/r/freddo-espresso-480.avif 480w, /assets/img/r/freddo-espresso-800.avif 800w, /assets/img/r/freddo-espresso-921.avif 921w" sizes="18vw"><source type="image/webp" srcset="/assets/img/r/freddo-espresso-480.webp 480w, /assets/img/r/freddo-espresso-800.webp 800w, /assets/img/r/freddo-espresso-921.webp 921w" sizes="18vw"><img src="/assets/img/r/freddo-espresso-800.webp" width="921" height="1151" alt="A tall glass of freddo espresso over ice with a thick layer of foam and a striped paper straw" loading="lazy" decoding="async"></picture></div>
+      <p class="menu-hero-note hand" aria-hidden="true">fresh every morning</p>
+    </div>
+  </div>
 </section>
-<section id="breakfast" class="py-10" aria-labelledby="breakfast-title">
-  <h2 id="breakfast-title" class="text-3xl">Breakfast</h2>
-  <p class="mt-1 text-moss">Served until 11:30am.</p>
-  <ul class="mt-6 grid gap-x-10 gap-y-6 md:grid-cols-2">
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Egg &amp; pancetta focaccia</h3>
-        <span class="font-display font-medium">£7.50</span>
+<span id="order" class="block"></span>
+<div id="menu-controls" class="menu-controls js-only">
+  <div class="container-page">
+    <form id="menu-form" class="menu-controls-inner" role="search" aria-label="Search and filter the menu">
+      <div class="menu-search">
+        <label for="menu-search" class="sr-only">Search the menu</label>
+        <svg aria-hidden="true" focusable="false" class="menu-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="menu-search" type="search" class="field menu-search-field" placeholder="Search" autocomplete="off" enterkeyhint="search" />
       </div>
-      <p class="mt-1 text-sm">Soft fried egg, crispy pancetta and a little chilli butter in warm focaccia.</p>
-      
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Greek yoghurt, honey &amp; walnuts</h3>
-        <span class="font-display font-medium">£5.50</span>
+      <fieldset class="menu-diets">
+        <legend class="sr-only">Dietary filters</legend>
+        <label class="chip-check"><input type="checkbox" id="menu-v" /><span><svg aria-hidden="true" focusable="false" class="hidden sm:block" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19C5 10 10 5 20 4c-1 10-6 15-15 15z"/><path d="M5 19l8-8"/></svg><span class="sm:hidden">Veggie</span><span class="hidden sm:inline">Vegetarian</span></span></label>
+        <label class="chip-check"><input type="checkbox" id="menu-vg" /><span><svg aria-hidden="true" focusable="false" class="hidden sm:block" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19C5 10 10 5 20 4c-1 10-6 15-15 15z"/><path d="M5 19l8-8"/></svg>Vegan</span></label>
+      </fieldset>
+      <div class="menu-tabs-wrap">
+        <div id="menu-tabs" class="menu-tabs" role="group" aria-label="Menu categories">
+          <button type="button" class="menu-tab" data-tab="" aria-pressed="true">All</button>
+          <button type="button" class="menu-tab" data-tab="sandwiches" aria-pressed="false">Sandwiches</button>
+          <button type="button" class="menu-tab" data-tab="breakfast" aria-pressed="false">Breakfast</button>
+          <button type="button" class="menu-tab" data-tab="hot-coffee" aria-pressed="false">Hot coffee</button>
+          <button type="button" class="menu-tab" data-tab="cold-coffee" aria-pressed="false">Cold coffee</button>
+          <button type="button" class="menu-tab" data-tab="sweets" aria-pressed="false">Sweets</button>
+        </div>
       </div>
-      <p class="mt-1 text-sm">Thick strained yoghurt with thyme honey and toasted walnuts.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Spanakopita</h3>
-        <span class="font-display font-medium">£5.95</span>
-      </div>
-      <p class="mt-1 text-sm">Spinach and feta in crisp, buttery filo. Served warm.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Greek classic</span></p>
-    </li>
-  </ul>
-</section>
-<section id="hot-coffee" class="py-10" aria-labelledby="hot-coffee-title">
-  <h2 id="hot-coffee-title" class="text-3xl">Hot Coffee</h2>
-  <p class="mt-1 text-moss">A seasonal espresso blend, pulled to order.</p>
-  <ul class="mt-6 grid gap-x-10 gap-y-6 md:grid-cols-2">
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Espresso</h3>
-        <span class="font-display font-medium">£2.80</span>
-      </div>
-      <p class="mt-1 text-sm">A double shot, short and sweet.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegan</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Macchiato</h3>
-        <span class="font-display font-medium">£3.00</span>
-      </div>
-      <p class="mt-1 text-sm">Espresso marked with a spoon of milk foam.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Cortado</h3>
-        <span class="font-display font-medium">£3.40</span>
-      </div>
-      <p class="mt-1 text-sm">Equal parts espresso and warm milk.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Flat white</h3>
-        <span class="font-display font-medium">£3.80</span>
-      </div>
-      <p class="mt-1 text-sm">Double ristretto with silky steamed milk.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Cappuccino</h3>
-        <span class="font-display font-medium">£3.70</span>
-      </div>
-      <p class="mt-1 text-sm">Espresso, steamed milk and a deep cap of foam.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Latte</h3>
-        <span class="font-display font-medium">£3.80</span>
-      </div>
-      <p class="mt-1 text-sm">Espresso with plenty of steamed milk.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Mocha</h3>
-        <span class="font-display font-medium">£4.20</span>
-      </div>
-      <p class="mt-1 text-sm">Espresso, dark chocolate and steamed milk.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span></p>
-    </li>
-  </ul>
-</section>
-<section id="cold-coffee" class="py-10" aria-labelledby="cold-coffee-title">
-  <h2 id="cold-coffee-title" class="text-3xl">Cold Coffee</h2>
-  <p class="mt-1 text-moss">Shaken, poured over ice, or brewed cold overnight.</p>
-  <ul class="mt-6 grid gap-x-10 gap-y-6 md:grid-cols-2">
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Freddo espresso</h3>
-        <span class="font-display font-medium">£3.90</span>
-      </div>
-      <p class="mt-1 text-sm">The Greek summer classic: a double espresso shaken hard with ice until it froths, poured over fresh ice.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegan</span><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Greek classic</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Freddo cappuccino</h3>
-        <span class="font-display font-medium">£4.30</span>
-      </div>
-      <p class="mt-1 text-sm">A freddo espresso crowned with cold whipped milk foam.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Greek classic</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Iced latte</h3>
-        <span class="font-display font-medium">£4.20</span>
-      </div>
-      <p class="mt-1 text-sm">Espresso and cold milk over ice.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Iced americano</h3>
-        <span class="font-display font-medium">£3.60</span>
-      </div>
-      <p class="mt-1 text-sm">Espresso lengthened with cold water over ice.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegan</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Cold brew</h3>
-        <span class="font-display font-medium">£4.00</span>
-      </div>
-      <p class="mt-1 text-sm">Steeped slowly overnight. Smooth, mellow and served over ice.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegan</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Espresso tonic</h3>
-        <span class="font-display font-medium">£4.50</span>
-      </div>
-      <p class="mt-1 text-sm">A double shot floated over tonic, ice and a twist of orange.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegan</span><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">New</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Affogato</h3>
-        <span class="font-display font-medium">£5.00</span>
-      </div>
-      <p class="mt-1 text-sm">A scoop of fior di latte gelato drowned in hot espresso.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Iced mocha</h3>
-        <span class="font-display font-medium">£4.60</span>
-      </div>
-      <p class="mt-1 text-sm">Espresso, dark chocolate and cold milk over ice.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span></p>
-    </li>
-  </ul>
-</section>
-<section id="sweets" class="py-10" aria-labelledby="sweets-title">
-  <h2 id="sweets-title" class="text-3xl">Sweets</h2>
-  <p class="mt-1 text-moss">Something small with your coffee.</p>
-  <ul class="mt-6 grid gap-x-10 gap-y-6 md:grid-cols-2">
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Cannoli</h3>
-        <span class="font-display font-medium">£3.80</span>
-      </div>
-      <p class="mt-1 text-sm">Crisp shell filled to order with sweet ricotta and candied orange.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Tiramisu cup</h3>
-        <span class="font-display font-medium">£5.50</span>
-      </div>
-      <p class="mt-1 text-sm">Espresso-soaked savoiardi, mascarpone and cocoa.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Baklava</h3>
-        <span class="font-display font-medium">£3.50</span>
-      </div>
-      <p class="mt-1 text-sm">Layers of filo, pistachios and honey syrup. Two pieces.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegetarian</span><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Greek classic</span></p>
-    </li>
-    <li>
-      <div class="flex items-baseline justify-between gap-4">
-        <h3 class="text-lg">Olive-oil cake</h3>
-        <span class="font-display font-medium">£4.20</span>
-      </div>
-      <p class="mt-1 text-sm">Lemon and olive-oil sponge, light and not too sweet.</p>
-      <p class="mt-2 flex flex-wrap gap-2"><span class="rounded-full border border-moss/40 px-2 py-0.5 font-display text-xs uppercase tracking-wide2 text-moss">Vegan</span></p>
-    </li>
-  </ul>
-</section>
+    </form>
+  </div>
 </div>
+<noscript>
+  <nav class="container-page flex flex-wrap gap-2 pb-4" aria-label="Menu categories">
+    <a class="menu-tab" href="#sandwiches">Sandwiches</a>
+    <a class="menu-tab" href="#breakfast">Breakfast</a>
+    <a class="menu-tab" href="#hot-coffee">Hot coffee</a>
+    <a class="menu-tab" href="#cold-coffee">Cold coffee</a>
+    <a class="menu-tab" href="#sweets">Sweets</a>
+  </nav>
+</noscript>
+<div id="menu-results" class="container-page pb-24 pt-6 md:pt-8">
+  <div class="js-only flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+    <p id="menu-status" class="text-sm font-semibold text-moss" role="status" aria-live="polite">Showing all 30 items.</p>
+    <button id="menu-reset" type="button" class="text-link text-sm" hidden>Clear search and filters</button>
+  </div>
+  <div id="menu-empty" class="menu-empty" hidden>
+    <svg aria-hidden="true" focusable="false" class="mx-auto h-12 w-12 text-lilac" viewBox="-20 -20 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path transform="rotate(0)" d="M0-3C-3.5-7-3.5-13 0-17C3.5-13 3.5-7 0-3Z"/><path transform="rotate(60)" d="M0-3C-3.5-7-3.5-13 0-17C3.5-13 3.5-7 0-3Z"/><path transform="rotate(120)" d="M0-3C-3.5-7-3.5-13 0-17C3.5-13 3.5-7 0-3Z"/><path transform="rotate(180)" d="M0-3C-3.5-7-3.5-13 0-17C3.5-13 3.5-7 0-3Z"/><path transform="rotate(240)" d="M0-3C-3.5-7-3.5-13 0-17C3.5-13 3.5-7 0-3Z"/><path transform="rotate(300)" d="M0-3C-3.5-7-3.5-13 0-17C3.5-13 3.5-7 0-3Z"/><circle r="2.2"/></svg>
+    <h2 class="mt-4 text-3xl">Nothing matches that.</h2>
+    <p id="menu-empty-text" class="mt-2">Try a different word, or show the full menu again.</p>
+    <button id="menu-empty-reset" type="button" class="btn btn-primary mt-6">Show the full menu</button>
+  </div>
+  <div class="space-y-14 md:space-y-20">
+    <section id="sandwiches" class="menu-cat" data-category="sandwiches" aria-labelledby="sandwiches-title">
+      <div class="menu-cat-head">
+        <h2 id="sandwiches-title" class="text-3xl md:text-4xl">Signature Sandwiches</h2>
+        <p class="mt-2 text-moss">Focaccia and ciabatta baked fresh each morning, filled to order.</p>
+        
+      </div>
+      <ul class="menu-grid" role="list">
+        <li id="dish-mortadella-focaccia" class="menu-item" data-item="mortadella-focaccia" data-diet="" data-search="mortadella &amp; burrata focaccia mortadella, a whole burrata and pistachio pesto on rosemary focaccia. signature sandwiches  signature new">
+          <div class="menu-thumb"><picture><source type="image/avif" srcset="/assets/img/r/mortadella-focaccia-480.avif 480w, /assets/img/r/mortadella-focaccia-800.avif 800w, /assets/img/r/mortadella-focaccia-921.avif 921w" sizes="112px"><source type="image/webp" srcset="/assets/img/r/mortadella-focaccia-480.webp 480w, /assets/img/r/mortadella-focaccia-800.webp 800w, /assets/img/r/mortadella-focaccia-921.webp 921w" sizes="112px"><img src="/assets/img/r/mortadella-focaccia-800.webp" width="921" height="1151" alt="A rosemary focaccia sandwich filled with mortadella, burrata and pistachio pesto, topped with crushed pistachios" loading="lazy" decoding="async"></picture></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Mortadella &amp; burrata focaccia</h3>
+              <p class="price">£11.50</p>
+            </div>
+            <p class="mt-1 text-sm">Mortadella, a whole burrata and pistachio pesto on rosemary focaccia.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-soft">Signature</span><span class="tag tag-new">New</span></p>
+              <button type="button" class="menu-add js-only" data-add="mortadella-focaccia" aria-label="Add Mortadella &amp; burrata focaccia to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-porchetta-ciabatta" class="menu-item" data-item="porchetta-ciabatta" data-diet="" data-search="porchetta ciabatta slow-roast porchetta, salsa verde and rocket in a toasted ciabatta. signature sandwiches  signature">
+          <div class="menu-thumb"><picture><source type="image/avif" srcset="/assets/img/r/hero-porchetta-480.avif 480w, /assets/img/r/hero-porchetta-800.avif 800w, /assets/img/r/hero-porchetta-1400.avif 1400w, /assets/img/r/hero-porchetta-2000.avif 2000w" sizes="112px"><source type="image/webp" srcset="/assets/img/r/hero-porchetta-480.webp 480w, /assets/img/r/hero-porchetta-800.webp 800w, /assets/img/r/hero-porchetta-1400.webp 1400w, /assets/img/r/hero-porchetta-2000.webp 2000w" sizes="112px"><img src="/assets/img/r/hero-porchetta-800.webp" width="2400" height="1600" alt="A porchetta ciabatta cut in half, with salsa verde and rocket, on a linen napkin on a marble counter in front of dark green tiles" loading="lazy" decoding="async"></picture></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Porchetta ciabatta</h3>
+              <p class="price">£11.00</p>
+            </div>
+            <p class="mt-1 text-sm">Slow-roast porchetta, salsa verde and rocket in a toasted ciabatta.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-soft">Signature</span></p>
+              <button type="button" class="menu-add js-only" data-add="porchetta-ciabatta" aria-label="Add Porchetta ciabatta to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-prosciutto-fig" class="menu-item" data-item="prosciutto-fig" data-diet="" data-search="prosciutto, mozzarella &amp; fig prosciutto crudo, fior di latte and fig jam on focaccia. signature sandwiches ">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark w-20" viewBox="0 0 140 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 40C34 34 72 22 136 6"/><path transform="translate(18 37) rotate(-58) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(32 34) rotate(18) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(48 30) rotate(-62) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(62 26) rotate(14) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(78 22) rotate(-64) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(92 18) rotate(10) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(106 14) rotate(-66) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(118 10) rotate(6) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(130 7) rotate(-24) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Prosciutto, mozzarella &amp; fig</h3>
+              <p class="price">£10.50</p>
+            </div>
+            <p class="mt-1 text-sm">Prosciutto crudo, fior di latte and fig jam on focaccia.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"></p>
+              <button type="button" class="menu-add js-only" data-add="prosciutto-fig" aria-label="Add Prosciutto, mozzarella &amp; fig to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-caprese" class="menu-item" data-item="caprese" data-diet="v" data-search="caprese heritage tomato, buffalo mozzarella, basil and good olive oil on ciabatta. signature sandwiches vegetarian signature">
+          <div class="menu-thumb"><picture><source type="image/avif" srcset="/assets/img/r/caprese-ciabatta-480.avif 480w, /assets/img/r/caprese-ciabatta-800.avif 800w, /assets/img/r/caprese-ciabatta-921.avif 921w" sizes="112px"><source type="image/webp" srcset="/assets/img/r/caprese-ciabatta-480.webp 480w, /assets/img/r/caprese-ciabatta-800.webp 800w, /assets/img/r/caprese-ciabatta-921.webp 921w" sizes="112px"><img src="/assets/img/r/caprese-ciabatta-800.webp" width="921" height="1151" alt="A ciabatta filled with tomato, buffalo mozzarella and fresh basil on a linen napkin" loading="lazy" decoding="async"></picture></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Caprese</h3>
+              <p class="price">£9.00</p>
+            </div>
+            <p class="mt-1 text-sm">Heritage tomato, buffalo mozzarella, basil and good olive oil on ciabatta.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span><span class="tag tag-soft">Signature</span></p>
+              <button type="button" class="menu-add js-only" data-add="caprese" aria-label="Add Caprese to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-chicken-souvlaki" class="menu-item" data-item="chicken-souvlaki" data-diet="" data-search="chicken souvlaki pita charred lemon-oregano chicken, tzatziki, red onion and tomato in a warm pita. signature sandwiches  signature greek classic">
+          <div class="menu-thumb"><picture><source type="image/avif" srcset="/assets/img/r/souvlaki-pita-480.avif 480w, /assets/img/r/souvlaki-pita-800.avif 800w, /assets/img/r/souvlaki-pita-921.avif 921w" sizes="112px"><source type="image/webp" srcset="/assets/img/r/souvlaki-pita-480.webp 480w, /assets/img/r/souvlaki-pita-800.webp 800w, /assets/img/r/souvlaki-pita-921.webp 921w" sizes="112px"><img src="/assets/img/r/souvlaki-pita-800.webp" width="921" height="1151" alt="A toasted pita wrapped in paper, filled with chicken souvlaki, tzatziki, red onion and tomato, with a lemon wedge" loading="lazy" decoding="async"></picture></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Chicken souvlaki pita</h3>
+              <p class="price">£10.50</p>
+            </div>
+            <p class="mt-1 text-sm">Charred lemon-oregano chicken, tzatziki, red onion and tomato in a warm pita.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-soft">Signature</span><span class="tag tag-soft">Greek classic</span></p>
+              <button type="button" class="menu-add js-only" data-add="chicken-souvlaki" aria-label="Add Chicken souvlaki pita to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-greek-lamb" class="menu-item" data-item="greek-lamb" data-diet="" data-search="greek lamb, feta &amp; olive slow-cooked lamb, crumbled feta, kalamata olives and oregano on ciabatta. signature sandwiches ">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark w-20" viewBox="0 0 140 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 40C34 34 72 22 136 6"/><path transform="translate(18 37) rotate(-58) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(32 34) rotate(18) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(48 30) rotate(-62) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(62 26) rotate(14) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(78 22) rotate(-64) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(92 18) rotate(10) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(106 14) rotate(-66) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(118 10) rotate(6) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(130 7) rotate(-24) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Greek lamb, feta &amp; olive</h3>
+              <p class="price">£11.50</p>
+            </div>
+            <p class="mt-1 text-sm">Slow-cooked lamb, crumbled feta, kalamata olives and oregano on ciabatta.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"></p>
+              <button type="button" class="menu-add js-only" data-add="greek-lamb" aria-label="Add Greek lamb, feta &amp; olive to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-halloumi-pepper" class="menu-item" data-item="halloumi-pepper" data-diet="v" data-search="halloumi, roast pepper &amp; honey grilled halloumi, sweet roast peppers, rocket and a drizzle of thyme honey. signature sandwiches vegetarian">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark w-20" viewBox="0 0 140 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 40C34 34 72 22 136 6"/><path transform="translate(18 37) rotate(-58) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(32 34) rotate(18) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(48 30) rotate(-62) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(62 26) rotate(14) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(78 22) rotate(-64) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(92 18) rotate(10) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(106 14) rotate(-66) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(118 10) rotate(6) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(130 7) rotate(-24) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Halloumi, roast pepper &amp; honey</h3>
+              <p class="price">£9.50</p>
+            </div>
+            <p class="mt-1 text-sm">Grilled halloumi, sweet roast peppers, rocket and a drizzle of thyme honey.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="halloumi-pepper" aria-label="Add Halloumi, roast pepper &amp; honey to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-roast-veg-hummus" class="menu-item" data-item="roast-veg-hummus" data-diet="vg" data-search="roast veg, hummus &amp; tapenade roast courgette, aubergine and pepper with hummus and black olive tapenade. signature sandwiches vegan">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark w-20" viewBox="0 0 140 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 40C34 34 72 22 136 6"/><path transform="translate(18 37) rotate(-58) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(32 34) rotate(18) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(48 30) rotate(-62) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(62 26) rotate(14) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(78 22) rotate(-64) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(92 18) rotate(10) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(106 14) rotate(-66) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(118 10) rotate(6) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(130 7) rotate(-24) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Roast veg, hummus &amp; tapenade</h3>
+              <p class="price">£9.00</p>
+            </div>
+            <p class="mt-1 text-sm">Roast courgette, aubergine and pepper with hummus and black olive tapenade.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegan">VG<span class="sr-only"> (Vegan)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="roast-veg-hummus" aria-label="Add Roast veg, hummus &amp; tapenade to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="breakfast" class="menu-cat" data-category="breakfast" aria-labelledby="breakfast-title">
+      <div class="menu-cat-head">
+        <h2 id="breakfast-title" class="text-3xl md:text-4xl">Breakfast</h2>
+        <p class="mt-2 text-moss">Served until 11:30am.</p>
+        
+      </div>
+      <ul class="menu-grid" role="list">
+        <li id="dish-egg-pancetta" class="menu-item" data-item="egg-pancetta" data-diet="" data-search="egg &amp; pancetta focaccia soft fried egg, crispy pancetta and a little chilli butter in warm focaccia. breakfast ">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark w-20" viewBox="0 0 140 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 40C34 34 72 22 136 6"/><path transform="translate(18 37) rotate(-58) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(32 34) rotate(18) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(48 30) rotate(-62) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(62 26) rotate(14) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(78 22) rotate(-64) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(92 18) rotate(10) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(106 14) rotate(-66) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(118 10) rotate(6) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(130 7) rotate(-24) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Egg &amp; pancetta focaccia</h3>
+              <p class="price">£7.50</p>
+            </div>
+            <p class="mt-1 text-sm">Soft fried egg, crispy pancetta and a little chilli butter in warm focaccia.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"></p>
+              <button type="button" class="menu-add js-only" data-add="egg-pancetta" aria-label="Add Egg &amp; pancetta focaccia to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-greek-yoghurt" class="menu-item" data-item="greek-yoghurt" data-diet="v" data-search="greek yoghurt, honey &amp; walnuts thick strained yoghurt with thyme honey and toasted walnuts. breakfast vegetarian">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark w-20" viewBox="0 0 140 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 40C34 34 72 22 136 6"/><path transform="translate(18 37) rotate(-58) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(32 34) rotate(18) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(48 30) rotate(-62) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(62 26) rotate(14) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(78 22) rotate(-64) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(92 18) rotate(10) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(106 14) rotate(-66) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(118 10) rotate(6) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(130 7) rotate(-24) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Greek yoghurt, honey &amp; walnuts</h3>
+              <p class="price">£5.50</p>
+            </div>
+            <p class="mt-1 text-sm">Thick strained yoghurt with thyme honey and toasted walnuts.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="greek-yoghurt" aria-label="Add Greek yoghurt, honey &amp; walnuts to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-spanakopita" class="menu-item" data-item="spanakopita" data-diet="v" data-search="spanakopita spinach and feta in crisp, buttery filo. served warm. breakfast vegetarian greek classic">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark w-20" viewBox="0 0 140 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 40C34 34 72 22 136 6"/><path transform="translate(18 37) rotate(-58) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(32 34) rotate(18) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(48 30) rotate(-62) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(62 26) rotate(14) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(78 22) rotate(-64) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(92 18) rotate(10) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(106 14) rotate(-66) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(118 10) rotate(6) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/><path transform="translate(130 7) rotate(-24) scale(0.9)" fill="currentColor" stroke="none" d="M0 0C6-4.2 15-4.6 24 0C15 4.6 6 4.2 0 0Z"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Spanakopita</h3>
+              <p class="price">£5.95</p>
+            </div>
+            <p class="mt-1 text-sm">Spinach and feta in crisp, buttery filo. Served warm.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span><span class="tag tag-soft">Greek classic</span></p>
+              <button type="button" class="menu-add js-only" data-add="spanakopita" aria-label="Add Spanakopita to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="hot-coffee" class="menu-cat" data-category="hot-coffee" aria-labelledby="hot-coffee-title">
+      <div class="menu-cat-head">
+        <h2 id="hot-coffee-title" class="text-3xl md:text-4xl">Hot Coffee</h2>
+        <p class="mt-2 text-moss">A seasonal espresso blend, pulled to order.</p>
+        <p class="mt-2 text-sm text-moss">Oat milk +£0.50 &middot; Extra shot +£0.70</p>
+      </div>
+      <ul class="menu-grid" role="list">
+        <li id="dish-espresso" class="menu-item" data-item="espresso" data-diet="vg" data-search="espresso a double shot, short and sweet. hot coffee vegan">
+          <div class="menu-thumb"><picture><source type="image/avif" srcset="/assets/img/r/espresso-shot-480.avif 480w, /assets/img/r/espresso-shot-800.avif 800w, /assets/img/r/espresso-shot-1400.avif 1400w" sizes="112px"><source type="image/webp" srcset="/assets/img/r/espresso-shot-480.webp 480w, /assets/img/r/espresso-shot-800.webp 800w, /assets/img/r/espresso-shot-1400.webp 1400w" sizes="112px"><img src="/assets/img/r/espresso-shot-800.webp" width="1400" height="1750" alt="A shot of espresso in a small glass on a scale beneath the machine" loading="lazy" decoding="async"></picture></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Espresso</h3>
+              <p class="price">£2.80</p>
+            </div>
+            <p class="mt-1 text-sm">A double shot, short and sweet.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegan">VG<span class="sr-only"> (Vegan)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="espresso" aria-label="Add Espresso to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-macchiato" class="menu-item" data-item="macchiato" data-diet="v" data-search="macchiato espresso marked with a spoon of milk foam. hot coffee vegetarian">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v4a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V9z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Macchiato</h3>
+              <p class="price">£3.00</p>
+            </div>
+            <p class="mt-1 text-sm">Espresso marked with a spoon of milk foam.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="macchiato" aria-label="Add Macchiato to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-cortado" class="menu-item" data-item="cortado" data-diet="v" data-search="cortado equal parts espresso and warm milk. hot coffee vegetarian">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v4a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V9z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Cortado</h3>
+              <p class="price">£3.40</p>
+            </div>
+            <p class="mt-1 text-sm">Equal parts espresso and warm milk.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="cortado" aria-label="Add Cortado to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-flat-white" class="menu-item" data-item="flat-white" data-diet="v" data-search="flat white double ristretto with silky steamed milk. hot coffee vegetarian">
+          <div class="menu-thumb"><picture><source type="image/avif" srcset="/assets/img/r/flat-white-480.avif 480w, /assets/img/r/flat-white-800.avif 800w, /assets/img/r/flat-white-921.avif 921w" sizes="112px"><source type="image/webp" srcset="/assets/img/r/flat-white-480.webp 480w, /assets/img/r/flat-white-800.webp 800w, /assets/img/r/flat-white-921.webp 921w" sizes="112px"><img src="/assets/img/r/flat-white-800.webp" width="921" height="1151" alt="A flat white with leaf latte art in a cream cup and saucer on a marble counter" loading="lazy" decoding="async"></picture></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Flat white</h3>
+              <p class="price">£3.80</p>
+            </div>
+            <p class="mt-1 text-sm">Double ristretto with silky steamed milk.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="flat-white" aria-label="Add Flat white to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-cappuccino" class="menu-item" data-item="cappuccino" data-diet="v" data-search="cappuccino espresso, steamed milk and a deep cap of foam. hot coffee vegetarian">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v4a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V9z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Cappuccino</h3>
+              <p class="price">£3.70</p>
+            </div>
+            <p class="mt-1 text-sm">Espresso, steamed milk and a deep cap of foam.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="cappuccino" aria-label="Add Cappuccino to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-latte" class="menu-item" data-item="latte" data-diet="v" data-search="latte espresso with plenty of steamed milk. hot coffee vegetarian">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v4a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V9z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Latte</h3>
+              <p class="price">£3.80</p>
+            </div>
+            <p class="mt-1 text-sm">Espresso with plenty of steamed milk.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="latte" aria-label="Add Latte to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-mocha" class="menu-item" data-item="mocha" data-diet="v" data-search="mocha espresso, dark chocolate and steamed milk. hot coffee vegetarian">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13v4a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6V9z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Mocha</h3>
+              <p class="price">£4.20</p>
+            </div>
+            <p class="mt-1 text-sm">Espresso, dark chocolate and steamed milk.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="mocha" aria-label="Add Mocha to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="cold-coffee" class="menu-cat" data-category="cold-coffee" aria-labelledby="cold-coffee-title">
+      <div class="menu-cat-head">
+        <h2 id="cold-coffee-title" class="text-3xl md:text-4xl">Cold Coffee</h2>
+        <p class="mt-2 text-moss">Shaken, poured over ice, or brewed cold overnight.</p>
+        <p class="mt-2 text-sm text-moss">Oat milk +£0.50 &middot; Extra shot +£0.70</p>
+      </div>
+      <ul class="menu-grid" role="list">
+        <li id="dish-freddo-espresso" class="menu-item" data-item="freddo-espresso" data-diet="vg" data-search="freddo espresso the greek summer classic: a double espresso shaken hard with ice until it froths, poured over fresh ice. cold coffee vegan greek classic">
+          <div class="menu-thumb"><picture><source type="image/avif" srcset="/assets/img/r/freddo-espresso-480.avif 480w, /assets/img/r/freddo-espresso-800.avif 800w, /assets/img/r/freddo-espresso-921.avif 921w" sizes="112px"><source type="image/webp" srcset="/assets/img/r/freddo-espresso-480.webp 480w, /assets/img/r/freddo-espresso-800.webp 800w, /assets/img/r/freddo-espresso-921.webp 921w" sizes="112px"><img src="/assets/img/r/freddo-espresso-800.webp" width="921" height="1151" alt="A tall glass of freddo espresso over ice with a thick layer of foam and a striped paper straw" loading="lazy" decoding="async"></picture></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Freddo espresso</h3>
+              <p class="price">£3.90</p>
+            </div>
+            <p class="mt-1 text-sm">The Greek summer classic: a double espresso shaken hard with ice until it froths, poured over fresh ice.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegan">VG<span class="sr-only"> (Vegan)</span></span><span class="tag tag-soft">Greek classic</span></p>
+              <button type="button" class="menu-add js-only" data-add="freddo-espresso" aria-label="Add Freddo espresso to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-freddo-cappuccino" class="menu-item" data-item="freddo-cappuccino" data-diet="v" data-search="freddo cappuccino a freddo espresso crowned with cold whipped milk foam. cold coffee vegetarian greek classic">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l7-4 7 4v8l-7 4-7-4z"/><path d="M5 8l7 4 7-4M12 12v8"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Freddo cappuccino</h3>
+              <p class="price">£4.30</p>
+            </div>
+            <p class="mt-1 text-sm">A freddo espresso crowned with cold whipped milk foam.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span><span class="tag tag-soft">Greek classic</span></p>
+              <button type="button" class="menu-add js-only" data-add="freddo-cappuccino" aria-label="Add Freddo cappuccino to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-iced-latte" class="menu-item" data-item="iced-latte" data-diet="v" data-search="iced latte espresso and cold milk over ice. cold coffee vegetarian">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l7-4 7 4v8l-7 4-7-4z"/><path d="M5 8l7 4 7-4M12 12v8"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Iced latte</h3>
+              <p class="price">£4.20</p>
+            </div>
+            <p class="mt-1 text-sm">Espresso and cold milk over ice.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="iced-latte" aria-label="Add Iced latte to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-iced-americano" class="menu-item" data-item="iced-americano" data-diet="vg" data-search="iced americano espresso lengthened with cold water over ice. cold coffee vegan">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l7-4 7 4v8l-7 4-7-4z"/><path d="M5 8l7 4 7-4M12 12v8"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Iced americano</h3>
+              <p class="price">£3.60</p>
+            </div>
+            <p class="mt-1 text-sm">Espresso lengthened with cold water over ice.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegan">VG<span class="sr-only"> (Vegan)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="iced-americano" aria-label="Add Iced americano to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-cold-brew" class="menu-item" data-item="cold-brew" data-diet="vg" data-search="cold brew steeped slowly overnight. smooth, mellow and served over ice. cold coffee vegan">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l7-4 7 4v8l-7 4-7-4z"/><path d="M5 8l7 4 7-4M12 12v8"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Cold brew</h3>
+              <p class="price">£4.00</p>
+            </div>
+            <p class="mt-1 text-sm">Steeped slowly overnight. Smooth, mellow and served over ice.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegan">VG<span class="sr-only"> (Vegan)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="cold-brew" aria-label="Add Cold brew to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-espresso-tonic" class="menu-item" data-item="espresso-tonic" data-diet="vg" data-search="espresso tonic a double shot floated over tonic, ice and a twist of orange. cold coffee vegan new">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l7-4 7 4v8l-7 4-7-4z"/><path d="M5 8l7 4 7-4M12 12v8"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Espresso tonic</h3>
+              <p class="price">£4.50</p>
+            </div>
+            <p class="mt-1 text-sm">A double shot floated over tonic, ice and a twist of orange.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegan">VG<span class="sr-only"> (Vegan)</span></span><span class="tag tag-new">New</span></p>
+              <button type="button" class="menu-add js-only" data-add="espresso-tonic" aria-label="Add Espresso tonic to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-affogato" class="menu-item" data-item="affogato" data-diet="v" data-search="affogato a scoop of fior di latte gelato drowned in hot espresso. cold coffee vegetarian">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l7-4 7 4v8l-7 4-7-4z"/><path d="M5 8l7 4 7-4M12 12v8"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Affogato</h3>
+              <p class="price">£5.00</p>
+            </div>
+            <p class="mt-1 text-sm">A scoop of fior di latte gelato drowned in hot espresso.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="affogato" aria-label="Add Affogato to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-iced-mocha" class="menu-item" data-item="iced-mocha" data-diet="v" data-search="iced mocha espresso, dark chocolate and cold milk over ice. cold coffee vegetarian">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l7-4 7 4v8l-7 4-7-4z"/><path d="M5 8l7 4 7-4M12 12v8"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Iced mocha</h3>
+              <p class="price">£4.60</p>
+            </div>
+            <p class="mt-1 text-sm">Espresso, dark chocolate and cold milk over ice.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="iced-mocha" aria-label="Add Iced mocha to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="sweets" class="menu-cat" data-category="sweets" aria-labelledby="sweets-title">
+      <div class="menu-cat-head">
+        <h2 id="sweets-title" class="text-3xl md:text-4xl">Sweets</h2>
+        <p class="mt-2 text-moss">Something small with your coffee.</p>
+        
+      </div>
+      <ul class="menu-grid" role="list">
+        <li id="dish-cannoli" class="menu-item" data-item="cannoli" data-diet="v" data-search="cannoli crisp shell filled to order with sweet ricotta and candied orange. sweets vegetarian">
+          <div class="menu-thumb"><picture><source type="image/avif" srcset="/assets/img/r/cannoli-480.avif 480w, /assets/img/r/cannoli-800.avif 800w, /assets/img/r/cannoli-1400.avif 1400w" sizes="112px"><source type="image/webp" srcset="/assets/img/r/cannoli-480.webp 480w, /assets/img/r/cannoli-800.webp 800w, /assets/img/r/cannoli-1400.webp 1400w" sizes="112px"><img src="/assets/img/r/cannoli-800.webp" width="1400" height="933" alt="Cannoli filled with ricotta cream and dusted with icing sugar" loading="lazy" decoding="async"></picture></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Cannoli</h3>
+              <p class="price">£3.80</p>
+            </div>
+            <p class="mt-1 text-sm">Crisp shell filled to order with sweet ricotta and candied orange.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="cannoli" aria-label="Add Cannoli to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-tiramisu" class="menu-item" data-item="tiramisu" data-diet="v" data-search="tiramisu cup espresso-soaked savoiardi, mascarpone and cocoa. sweets vegetarian">
+          <div class="menu-thumb"><picture><source type="image/avif" srcset="/assets/img/r/tiramisu-480.avif 480w, /assets/img/r/tiramisu-800.avif 800w, /assets/img/r/tiramisu-1400.avif 1400w" sizes="112px"><source type="image/webp" srcset="/assets/img/r/tiramisu-480.webp 480w, /assets/img/r/tiramisu-800.webp 800w, /assets/img/r/tiramisu-1400.webp 1400w" sizes="112px"><img src="/assets/img/r/tiramisu-800.webp" width="1400" height="933" alt="A tiramisu in a glass, dusted with cocoa, beside a coffee" loading="lazy" decoding="async"></picture></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Tiramisu cup</h3>
+              <p class="price">£5.50</p>
+            </div>
+            <p class="mt-1 text-sm">Espresso-soaked savoiardi, mascarpone and cocoa.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="tiramisu" aria-label="Add Tiramisu cup to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-baklava" class="menu-item" data-item="baklava" data-diet="v" data-search="baklava layers of filo, pistachios and honey syrup. two pieces. sweets vegetarian greek classic">
+          <div class="menu-thumb"><picture><source type="image/avif" srcset="/assets/img/r/baklava-480.avif 480w, /assets/img/r/baklava-800.avif 800w, /assets/img/r/baklava-1400.avif 1400w" sizes="112px"><source type="image/webp" srcset="/assets/img/r/baklava-480.webp 480w, /assets/img/r/baklava-800.webp 800w, /assets/img/r/baklava-1400.webp 1400w" sizes="112px"><img src="/assets/img/r/baklava-800.webp" width="1400" height="933" alt="Close-up of baklava with layers of filo and a pistachio filling" loading="lazy" decoding="async"></picture></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Baklava</h3>
+              <p class="price">£3.50</p>
+            </div>
+            <p class="mt-1 text-sm">Layers of filo, pistachios and honey syrup. Two pieces.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegetarian">V<span class="sr-only"> (Vegetarian)</span></span><span class="tag tag-soft">Greek classic</span></p>
+              <button type="button" class="menu-add js-only" data-add="baklava" aria-label="Add Baklava to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+        <li id="dish-olive-oil-cake" class="menu-item" data-item="olive-oil-cake" data-diet="vg" data-search="olive-oil cake lemon and olive-oil sponge, light and not too sweet. sweets vegan">
+          <div class="menu-thumb is-drawn"><svg aria-hidden="true" focusable="false" class="menu-thumb-mark h-12 w-12" viewBox="-20 -20 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path transform="rotate(0)" d="M0-3C-3.5-7-3.5-13 0-17C3.5-13 3.5-7 0-3Z"/><path transform="rotate(60)" d="M0-3C-3.5-7-3.5-13 0-17C3.5-13 3.5-7 0-3Z"/><path transform="rotate(120)" d="M0-3C-3.5-7-3.5-13 0-17C3.5-13 3.5-7 0-3Z"/><path transform="rotate(180)" d="M0-3C-3.5-7-3.5-13 0-17C3.5-13 3.5-7 0-3Z"/><path transform="rotate(240)" d="M0-3C-3.5-7-3.5-13 0-17C3.5-13 3.5-7 0-3Z"/><path transform="rotate(300)" d="M0-3C-3.5-7-3.5-13 0-17C3.5-13 3.5-7 0-3Z"/><circle r="2.2"/></svg></div>
+          <div class="flex min-w-0 flex-1 flex-col">
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="menu-name">Olive-oil cake</h3>
+              <p class="price">£4.20</p>
+            </div>
+            <p class="mt-1 text-sm">Lemon and olive-oil sponge, light and not too sweet.</p>
+            <div class="mt-auto flex items-end justify-between gap-3 pt-3">
+              <p class="flex min-w-0 flex-wrap gap-1.5"><span class="tag tag-diet" title="Vegan">VG<span class="sr-only"> (Vegan)</span></span></p>
+              <button type="button" class="menu-add js-only" data-add="olive-oil-cake" aria-label="Add Olive-oil cake to your order"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg><span data-add-label>Add</span></button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>
+<div id="pad-toast" class="pad-toast js-only" role="status" aria-live="polite"></div>
+<button id="pad-bar" type="button" class="pad-bar js-only" aria-haspopup="dialog" hidden>
+  <span class="pad-bar-count" id="pad-bar-count">0</span>
+  <span class="pad-bar-text">View order</span>
+  <span class="pad-bar-total" id="pad-bar-total"></span>
+</button>
+
+<dialog id="pad" class="pad js-only" aria-labelledby="pad-title">
+  <div class="pad-panel">
+    <p id="pad-live" class="sr-only" role="status" aria-live="polite"></p>
+    <div class="pad-head">
+      <div>
+        <p class="label">Order ahead &middot; collect</p>
+        <h2 id="pad-title" class="mt-1 text-3xl">Your order</h2>
+      </div>
+      <button id="pad-close" type="button" class="pad-icon-btn" aria-label="Close your order"><svg aria-hidden="true" focusable="false" class="" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+
+    <div class="pad-scroll" id="pad-scroll">
+      <div id="pad-empty" class="pad-empty" hidden>
+        <svg aria-hidden="true" focusable="false" class="mx-auto text-golddark" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+        <p class="mt-4 font-display text-xl font-medium">Nothing here yet.</p>
+        <p class="mt-1 text-sm">Tap <strong>Add</strong> on anything on the menu, then pick a time to collect it.</p>
+        <button id="pad-browse" type="button" class="btn btn-primary mt-6">Browse the menu</button>
+        <button id="pad-undo" type="button" class="text-link mt-4 block w-full text-sm" hidden>Undo clear</button>
+      </div>
+
+      <div id="pad-edit">
+        <ul id="pad-lines" class="pad-lines" role="list"></ul>
+        <button id="pad-clear" type="button" class="text-link mt-3 text-sm">Clear order</button>
+
+        <div class="pad-block" role="group" aria-labelledby="pad-when-title">
+          <h3 id="pad-when-title" class="pad-legend"><svg aria-hidden="true" focusable="false" class="" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Collection time</h3>
+          <p id="pad-when-note" class="mt-1 text-sm text-moss"></p>
+          <fieldset class="mt-4">
+            <legend class="sr-only">Collection day</legend>
+            <div id="pad-days" class="pad-days"></div>
+          </fieldset>
+          <fieldset class="mt-3">
+            <legend class="sr-only">Collection hour</legend>
+            <div id="pad-hours" class="pad-hours"></div>
+          </fieldset>
+          <fieldset class="mt-3">
+            <legend class="sr-only">Collection time</legend>
+            <div id="pad-slots" class="pad-slots"></div>
+          </fieldset>
+          <p class="pad-picked" aria-live="polite"><svg aria-hidden="true" focusable="false" class="shrink-0 text-golddark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span id="pad-picked"></span></p>
+        </div>
+
+        <div class="pad-block">
+          <label for="pad-name" class="field-label">Name for the order</label>
+          <input id="pad-name" class="field" type="text" autocomplete="given-name" maxlength="40" aria-describedby="pad-name-error" required />
+          <p id="pad-name-error" class="field-error" hidden>Add a name so we know whose order it is.</p>
+          <label for="pad-notes" class="field-label mt-5">Note <span class="font-normal text-moss">(optional)</span></label>
+          <textarea id="pad-notes" class="field pad-notes" rows="2" maxlength="200" placeholder="Allergies, no onion, extra hot…"></textarea>
+        </div>
+      </div>
+
+      <div id="pad-review" class="pad-review" hidden tabindex="-1">
+        <p class="label">Ready to send</p>
+        <h3 class="mt-2 text-2xl">Here's the message WhatsApp will open with.</h3>
+        <div class="wa-chat mt-5">
+          <div class="wa-head"><svg aria-hidden="true" focusable="false" class="" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.8z"/><path d="M9 9.5c.3 2 2.2 4.2 4.6 4.8l1.2-1.3 1.7.9c-.4 1.1-1.4 1.8-2.5 1.6-3-.6-5.6-3.2-6.2-6.2-.2-1.1.5-2.1 1.6-2.5l.9 1.7z"/></svg> <span>Wick House</span></div>
+          <p id="pad-message" class="wa-bubble"></p>
+        </div>
+        <p class="mt-4 text-sm">Press send in WhatsApp and we'll reply to confirm. Pay at the counter when you collect.</p>
+        <p class="pad-demo mt-4">Demo: the WhatsApp number is a placeholder, so this message won't reach anyone.</p>
+      </div>
+
+      <div id="pad-done" class="pad-done" hidden tabindex="-1">
+        <span class="pad-done-mark"><svg aria-hidden="true" focusable="false" class="" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+        <h3 class="mt-5 text-3xl">Over to WhatsApp.</h3>
+        <p id="pad-done-text" class="mt-2"></p>
+        <p class="hand mt-5">your daily wick fix, sorted</p>
+      </div>
+    </div>
+
+    <div class="pad-foot" id="pad-foot">
+      <div class="pad-total-row"><span>Total</span><span class="pad-leader" aria-hidden="true"></span><span id="pad-total">£0.00</span></div>
+      <div id="pad-actions-edit">
+        <button id="pad-send" type="button" class="btn btn-gold mt-4 w-full"><svg aria-hidden="true" focusable="false" class="" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.8z"/><path d="M9 9.5c.3 2 2.2 4.2 4.6 4.8l1.2-1.3 1.7.9c-.4 1.1-1.4 1.8-2.5 1.6-3-.6-5.6-3.2-6.2-6.2-.2-1.1.5-2.1 1.6-2.5l.9 1.7z"/></svg> Send order via WhatsApp</button>
+      </div>
+      <div id="pad-actions-review" class="mt-4 grid gap-3" hidden>
+        <a id="pad-wa" href="#" target="_blank" rel="noopener" class="btn btn-gold w-full"><svg aria-hidden="true" focusable="false" class="" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.8z"/><path d="M9 9.5c.3 2 2.2 4.2 4.6 4.8l1.2-1.3 1.7.9c-.4 1.1-1.4 1.8-2.5 1.6-3-.6-5.6-3.2-6.2-6.2-.2-1.1.5-2.1 1.6-2.5l.9 1.7z"/></svg> Open WhatsApp <svg aria-hidden="true" focusable="false" class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <button id="pad-back" type="button" class="btn btn-outline w-full">Edit order</button>
+      </div>
+      <div id="pad-actions-done" class="mt-4 grid gap-3" hidden>
+        <button id="pad-new" type="button" class="btn btn-primary w-full">Start a new order</button>
+        <button id="pad-keep" type="button" class="text-link text-sm">Keep this order</button>
+      </div>
+      <p class="mt-3 text-center text-xs text-moss">Nothing is charged online. Pay when you collect.</p>
+    </div>
+  </div>
+</dialog>
+<script type="application/json" id="pad-data">{"items":{"mortadella-focaccia":{"name":"Mortadella & burrata focaccia","price":"11.50","cat":"Sandwiches","addons":[]},"porchetta-ciabatta":{"name":"Porchetta ciabatta","price":"11.00","cat":"Sandwiches","addons":[]},"prosciutto-fig":{"name":"Prosciutto, mozzarella & fig","price":"10.50","cat":"Sandwiches","addons":[]},"caprese":{"name":"Caprese","price":"9.00","cat":"Sandwiches","addons":[]},"chicken-souvlaki":{"name":"Chicken souvlaki pita","price":"10.50","cat":"Sandwiches","addons":[]},"greek-lamb":{"name":"Greek lamb, feta & olive","price":"11.50","cat":"Sandwiches","addons":[]},"halloumi-pepper":{"name":"Halloumi, roast pepper & honey","price":"9.50","cat":"Sandwiches","addons":[]},"roast-veg-hummus":{"name":"Roast veg, hummus & tapenade","price":"9.00","cat":"Sandwiches","addons":[]},"egg-pancetta":{"name":"Egg & pancetta focaccia","price":"7.50","cat":"Breakfast","addons":[]},"greek-yoghurt":{"name":"Greek yoghurt, honey & walnuts","price":"5.50","cat":"Breakfast","addons":[]},"spanakopita":{"name":"Spanakopita","price":"5.95","cat":"Breakfast","addons":[]},"espresso":{"name":"Espresso","price":"2.80","cat":"Hot coffee","addons":["oat","shot"]},"macchiato":{"name":"Macchiato","price":"3.00","cat":"Hot coffee","addons":["oat","shot"]},"cortado":{"name":"Cortado","price":"3.40","cat":"Hot coffee","addons":["oat","shot"]},"flat-white":{"name":"Flat white","price":"3.80","cat":"Hot coffee","addons":["oat","shot"]},"cappuccino":{"name":"Cappuccino","price":"3.70","cat":"Hot coffee","addons":["oat","shot"]},"latte":{"name":"Latte","price":"3.80","cat":"Hot coffee","addons":["oat","shot"]},"mocha":{"name":"Mocha","price":"4.20","cat":"Hot coffee","addons":["oat","shot"]},"freddo-espresso":{"name":"Freddo espresso","price":"3.90","cat":"Cold coffee","addons":["oat","shot"]},"freddo-cappuccino":{"name":"Freddo cappuccino","price":"4.30","cat":"Cold coffee","addons":["oat","shot"]},"iced-latte":{"name":"Iced latte","price":"4.20","cat":"Cold coffee","addons":["oat","shot"]},"iced-americano":{"name":"Iced americano","price":"3.60","cat":"Cold coffee","addons":["oat","shot"]},"cold-brew":{"name":"Cold brew","price":"4.00","cat":"Cold coffee","addons":["oat","shot"]},"espresso-tonic":{"name":"Espresso tonic","price":"4.50","cat":"Cold coffee","addons":["oat","shot"]},"affogato":{"name":"Affogato","price":"5.00","cat":"Cold coffee","addons":["oat","shot"]},"iced-mocha":{"name":"Iced mocha","price":"4.60","cat":"Cold coffee","addons":["oat","shot"]},"cannoli":{"name":"Cannoli","price":"3.80","cat":"Sweets","addons":[]},"tiramisu":{"name":"Tiramisu cup","price":"5.50","cat":"Sweets","addons":[]},"baklava":{"name":"Baklava","price":"3.50","cat":"Sweets","addons":[]},"olive-oil-cake":{"name":"Olive-oil cake","price":"4.20","cat":"Sweets","addons":[]}},"addons":{"oat":{"label":"Oat milk","price":"0.50"},"shot":{"label":"Extra shot","price":"0.70"}},"hours":[{"days":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"15:00"},{"days":["Saturday","Sunday"],"opens":"08:00","closes":"16:00"}],"order":{"slotMinutes":10,"leadMinutes":15,"lastOrderBeforeCloseMinutes":20},"opening":"2026-11-18","whatsapp":"442079460123","name":"Wick House"}</script>
 </main>
 <footer class="site-footer on-dark" id="footer">
   <div class="footer-payoff container-page flex flex-col items-center pb-16 pt-20 text-center lg:pb-20 lg:pt-28" data-payoff>
