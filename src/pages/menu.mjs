@@ -128,7 +128,7 @@ const controls = `<span id="order" class="block"></span>
   </nav>
 </noscript>`;
 
-const results = `<div id="menu-results" class="container-page pb-24 pt-6 md:pt-8">
+const results = `<div id="menu-results" class="container-page pb-14 pt-6 md:pt-8 lg:pb-20">
   <div class="js-only flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
     <p id="menu-status" class="text-sm font-semibold text-moss" role="status" aria-live="polite">Showing all ${itemCount} items.</p>
     <button id="menu-reset" type="button" class="text-link text-sm" hidden>Clear search and filters</button>
@@ -139,7 +139,7 @@ const results = `<div id="menu-results" class="container-page pb-24 pt-6 md:pt-8
     <p id="menu-empty-text" class="mt-2">Try a different word, or show the full menu again.</p>
     <button id="menu-empty-reset" type="button" class="btn btn-primary mt-6">Show the full menu</button>
   </div>
-  <div class="space-y-14 md:space-y-20">
+  <div class="space-y-12 md:space-y-16">
     ${sections}
   </div>
 </div>`;

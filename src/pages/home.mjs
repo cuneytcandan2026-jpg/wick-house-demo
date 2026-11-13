@@ -165,11 +165,11 @@ const coffee = `<section id="coffee" class="section section-paper relative overf
         <button type="button" role="tab" id="coffee-tab-iced" aria-controls="coffee-iced" aria-selected="true" data-tab="iced">${lineIcon('ice', 18)} Iced</button>
       </div>
     </div>
-    <div class="mt-12" data-reveal>
+    <div class="mt-10 lg:mt-12" data-reveal>
       ${coffeePanel('iced', 'Iced coffee', 'freddo-espresso', homeItems('cold'), '<span class="hand">the Greek classic</span>')}
       ${coffeePanel('hot', 'Hot coffee', 'flat-white', homeItems('hot'), '<span class="hand">silky, every time</span>')}
     </div>
-    <p class="mt-10" data-reveal><a href="/menu/#cold-coffee" class="text-link">The full coffee menu</a> <span class="text-moss">&middot; oat milk and extra shots on everything</span></p>
+    <p class="mt-8" data-reveal><a href="/menu/#cold-coffee" class="text-link">The full coffee menu</a> <span class="text-moss">&middot; oat milk and extra shots on everything</span></p>
   </div>
 </section>`;
 
@@ -183,7 +183,7 @@ const steps = [
 ];
 
 const orderAhead = `<section id="order-ahead" class="section relative overflow-hidden" aria-labelledby="order-ahead-title">
-  <div class="container-page grid items-center gap-14 lg:grid-cols-12">
+  <div class="container-page grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
     <div class="lg:col-span-7">
       <div data-reveal>${head({ id: 'order-ahead', label: 'Order ahead', title: 'Beat the 7am rush.', intro: 'Order on the walk from the station and your coffee is waiting. No app to download, nothing to sign up for.' })}</div>
       <ol class="steps mt-10" role="list">
@@ -223,7 +223,7 @@ const orderAhead = `<section id="order-ahead" class="section relative overflow-h
 const stampCount = B.loyalty.stamps;
 const loyalty = `<section id="loyalty" class="section on-dark on-dark-surface relative overflow-hidden" aria-labelledby="loyalty-title">
   ${sprig('loyalty-sprig')}
-  <div class="container-page relative grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+  <div class="container-page relative grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
     <div data-reveal>
       <p class="label">Wick Loyalty</p>
       <span class="dash mt-3"></span>
@@ -301,7 +301,7 @@ const gallery = `<section id="gallery" class="section section-paper" aria-labell
       ${head({ id: 'gallery', label: 'Gallery', title: `${esc(B.vibe)}`, intro: 'A first look at the food, the mood and our posts so far.' })}
       <a href="${B.instagramUrl}" rel="noopener" class="btn btn-outline shrink-0 self-start md:self-auto">${icon('instagram', 18)} Follow @${B.instagram}</a>
     </div>
-    <ul class="gallery mt-12" role="list">
+    <ul class="gallery mt-10 lg:mt-12" role="list">
       ${GALLERY.map(([key, label, post], i) => `<li class="gallery-item" data-reveal style="--reveal-delay: ${(i % 3) * 80}ms">
         <a href="${photoUrl(key, 1400)}" class="gallery-link" data-full="${photoUrl(key, 2000)}" data-label="${esc(label)}">
           ${picture(key, { sizes: '(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 46vw' })}
@@ -310,7 +310,7 @@ const gallery = `<section id="gallery" class="section section-paper" aria-labell
         </a>
       </li>`).join('\n      ')}
     </ul>
-    <p class="mt-8 text-sm text-moss" data-reveal>Food and interior photos are illustrative until opening day.</p>
+    <p class="mt-4 text-sm text-moss" data-reveal>Food and interior photos are illustrative until opening day.</p>
   </div>
   <dialog id="lightbox" class="lightbox on-dark" aria-label="Photo viewer">
     <div class="lightbox-inner">

@@ -75,7 +75,7 @@ function actionBar() {
 // The logo's markup is the finished cup, so pages without the journey (and visitors without JavaScript) see it complete.
 function footer(brew) {
   return `<footer class="site-footer on-dark" id="footer">
-  <div class="footer-payoff container-page flex flex-col items-center pb-16 pt-20 text-center lg:flex-row lg:justify-center lg:gap-20 lg:pb-16 lg:pt-20 lg:text-left" data-payoff>
+  <div class="footer-payoff container-page flex flex-col items-center pb-12 pt-14 text-center lg:flex-row lg:justify-center lg:gap-20 lg:pb-14 lg:pt-16 lg:text-left" data-payoff>
     <div class="brew-logo" id="brew-art" data-state="brewed">${stackedLogo({ title: 'Wick House: coffee, sandwiches, lunch', brew: true })}</div>
     <span class="footer-payoff-rule" aria-hidden="true"></span>
     <div class="mt-10 flex flex-col items-center lg:mt-0 lg:items-start">
@@ -87,7 +87,7 @@ function footer(brew) {
       ${brew ? `<button type="button" class="brew-again mt-6" id="brew-again" hidden>${againIcon} ${BREW_COPY.again}</button>` : ''}
     </div>
   </div>
-  <div class="container-page grid gap-10 border-t border-white/10 py-14 md:grid-cols-3">
+  <div class="container-page grid gap-8 border-t border-white/10 py-10 md:grid-cols-3 md:py-12">
     <div>
       <h2 class="label mb-4">Opening hours</h2>
       <ul class="text-sm">${hoursRows()}</ul>
@@ -107,7 +107,7 @@ function footer(brew) {
       <p class="mt-2 text-sm text-cream/80">${esc(B.vibe)} Coming your way.</p>
     </div>
   </div>
-  <div class="container-page pb-10">
+  <div class="container-page pb-8">
     ${B.demo ? '<p class="demo-note">This is a demo website prepared for Wick House. The menu, prices, address, phone, email and opening hours are placeholders until the owners confirm them.</p>' : ''}
     <div class="mt-6 flex flex-col gap-1 text-xs text-cream/70 sm:flex-row sm:justify-between">
       <p>&copy; 2026 ${B.name}, Hackney Wick.</p>

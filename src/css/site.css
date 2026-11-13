@@ -197,8 +197,9 @@
   .demo-note { @apply rounded-card border border-dashed border-sage/40 px-4 py-3 text-sm text-cream/80; }
 
   /* ---------- Section shells ---------- */
-  .section { @apply py-20 lg:py-28; }
-  .section-tight { @apply py-12 lg:py-16; }
+  /* Every section has its own background, so the gap between two blocks of content is twice this padding. */
+  .section { @apply py-14 md:py-16 lg:py-20; }
+  .section-tight { @apply py-8 lg:py-12; }
   .section-paper { @apply bg-paper; background-image: var(--grain); }
   /* Light cards inside dark sections take back the light-surface colours. */
   .on-light { @apply text-forest; }
@@ -300,7 +301,7 @@
 
   /* ---------- 3. Signatures: a swipe row on phones, a grid of four on desktop ---------- */
   .sig-row {
-    @apply mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-6;
+    @apply mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 lg:mt-12;
     scroll-padding-inline: 1rem; scrollbar-width: none; overscroll-behavior-x: contain;
   }
   .sig-row::-webkit-scrollbar { display: none; }
